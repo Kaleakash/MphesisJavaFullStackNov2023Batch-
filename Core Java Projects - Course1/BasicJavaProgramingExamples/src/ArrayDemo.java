@@ -8,7 +8,7 @@ int xyz[]= {10,20,30,40,50,60,100,120,45,23,43,12,56,78,90};
 	System.out.println("0 index postion "+xyz[0]);
 	System.out.println("0 index postion "+xyz[3]);
 	//System.out.println("0 index postion "+xyz[10]);
-	int mno[]=new int[10];
+	int mno[]=new int[10];	// dynamic memory 
 	System.out.println("0 position value "+mno[0]);
 	System.out.println("9 position value "+mno[9]);
 	mno[0]=100;
