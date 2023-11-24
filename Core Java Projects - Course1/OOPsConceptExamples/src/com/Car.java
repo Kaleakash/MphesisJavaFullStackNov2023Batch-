@@ -37,4 +37,16 @@ public class Car {
 		System.out.println("Colour "+colour);
 		System.out.println("Price "+price);
 	}
+	Car() {
+		System.out.println("object created...");
+		this.wheel=4;
+		this.price=600000;
+		this.colour="Unknown";
+	}
+	// parameter consructor 
+	Car(int wheel, String colour,float price) {
+		this.wheel=wheel;	// this.wheel is instance and wheel is local 
+		this.colour=colour;
+		this.price=price;
+	}
 }
