@@ -9,6 +9,7 @@ public class TakingValueThroughKeyBoards {
 //		int b = sc.nextInt();
 //		int sum = a+b;
 //		System.out.println("Sum of two number is "+sum);
+		
 		String name = "Ravi Kumar";// memory created...
 		System.out.println(name);
 		System.out.println("Enter the id");
