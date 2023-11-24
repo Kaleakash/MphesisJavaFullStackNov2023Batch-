@@ -20,4 +20,11 @@ public class Car {
 		System.out.println("Car stop");
 	}
 	
+	void displayCarInfo() {
+		String msg="Car Info";		// local variable 
+		System.out.println(msg);
+		System.out.println("Wheel "+wheel);
+		System.out.println("Colour "+colour);
+		System.out.println("Price "+price);
+	}
 }
