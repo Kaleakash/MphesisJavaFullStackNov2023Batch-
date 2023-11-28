@@ -17,8 +17,8 @@ public class TryWithMultipleCatchBlock {
 		}
 		catch (ArithmeticException e) {
 			System.out.println("Divided by Zero "+e.toString());
-		}catch(ArrayIndexOutOfBoundsException e) {
-			System.out.println("Array index "+e.toString());
+		}catch(ArrayIndexOutOfBoundsException | NullPointerException e) {
+			System.out.println("Array index or Null Pointer"+e.toString());
 		}catch(Exception e) {
 			System.out.println("generic "+e.toString());
 		}
