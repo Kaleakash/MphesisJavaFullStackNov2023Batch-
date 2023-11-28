@@ -19,7 +19,5 @@ public class AnotherStaticExample {
 										Info.b=600;
 	obj1.dis1();      // a =100     b=600
 	obj2.dis1();      // a =400     b=600 
-
 	}
-
 }
