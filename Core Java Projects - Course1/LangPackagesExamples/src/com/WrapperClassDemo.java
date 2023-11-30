@@ -12,7 +12,7 @@ public class WrapperClassDemo {
 	float d = b.floatValue();
 	System.out.println(c);
 	System.out.println(d);
-	// String to integer or vice-versa 
+	// String to integerx or vice-versa 
 	String s1="10";
 	String s2 = "20";
 	System.out.println(s1+s2);
