@@ -1,5 +1,7 @@
 package com;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -41,16 +43,31 @@ public class ByteWiseClassses {
 //		fos.close();
 //		System.out.println("Data stored in file");
 		
-		// source : file , destination : file 
+//		// source : file , destination : file 
+//		FileInputStream fis = new FileInputStream("xyz.txt");
+//		FileOutputStream fos = new FileOutputStream("D:\\demo.txt");
+//		int ch;
+//		while((ch=fis.read()) != -1) {		// -1 = EOF
+//			fos.write(ch);
+//		}
+//		fis.close();
+//		fos.close();
+//		System.out.println("file copied....");
+		
+		// source : file , destination : file 	with buffer 
 		FileInputStream fis = new FileInputStream("xyz.txt");
+			BufferedInputStream bis = new BufferedInputStream(fis);
 		FileOutputStream fos = new FileOutputStream("D:\\demo.txt");
+		BufferedOutputStream bos = new BufferedOutputStream(fos);
 		int ch;
-		while((ch=fis.read()) != -1) {		// -1 = EOF
-			fos.write(ch);
+		while((ch=bis.read()) != -1) {		// -1 = EOF
+			bos.write(ch);
 		}
+		bos.flush();
 		fis.close();
 		fos.close();
 		System.out.println("file copied....");
+		
 	}
 
 }
