@@ -19,7 +19,7 @@ public class SetDemo {
 		ss1.add(30);
 		ss1.add(20);
 		ss1.add(10);
-		ss1.add(10.10);
+		//ss1.add(10.10);
 		ss1.add(60);
 		ss1.add(50);
 		System.out.println("Size "+ss1.size());
