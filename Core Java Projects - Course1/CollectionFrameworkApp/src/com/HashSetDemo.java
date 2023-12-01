@@ -12,7 +12,8 @@ public class HashSetDemo {
 	//Integer b = new Integer(a);
 	Integer b=a;		// converting primitive to object. 
 	hs.add(b);
-	hs.add(a);	//auto-boxing : converting primitive to object. 
+	hs.add(a);	//auto-boxing : converting primitive to object.
+	System.out.println("Size is "+hs.size());
 	hs.add(20);
 	hs.add(20.20);
 	hs.add(true);
