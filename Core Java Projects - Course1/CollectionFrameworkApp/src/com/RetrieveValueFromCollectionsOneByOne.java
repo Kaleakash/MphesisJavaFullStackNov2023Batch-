@@ -53,7 +53,7 @@ public class RetrieveValueFromCollectionsOneByOne {
 //		Object obj = ee.nextElement();
 //		System.out.println(obj);
 //	}
-		
+	
 	Map mm = new HashMap();
 	mm.put(1, "Ravi");
 	mm.put(2, "Ramesh");
