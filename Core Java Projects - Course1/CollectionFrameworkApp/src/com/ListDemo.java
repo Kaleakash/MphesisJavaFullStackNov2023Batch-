@@ -10,7 +10,7 @@ public class ListDemo {
 //		System.out.println(abc);
 //		System.out.println(abc[0]);
 //		System.out.println("Size of array "+abc.length);
-//		ArrayList al = new ArrayList();
+		ArrayList al = new ArrayList();
 //		al.add(3);
 //		al.add(1);
 //		al.add(9);
