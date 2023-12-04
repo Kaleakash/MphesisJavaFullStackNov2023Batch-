@@ -14,12 +14,12 @@ public class CollectionWithGenerics {
 //	System.out.println(n);
 		
 	List<Integer> ll = new ArrayList<Integer>();
-	ll.add(10);
+	ll.add(10);			// auto boxing : primitive to objects 
 	ll.add(20);
 	ll.add(30);
 	
 	int n=ll.get(0);
-	System.out.println(n);		// auto unboxing : converting primitive to object 
+	System.out.println(n);		// auto unboxing : converting object to primitive 
 	}
 
 }
