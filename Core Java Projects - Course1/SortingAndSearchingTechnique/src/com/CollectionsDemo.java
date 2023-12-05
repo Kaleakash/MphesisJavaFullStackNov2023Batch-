@@ -1,6 +1,7 @@
 package com;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -33,5 +34,15 @@ public class CollectionsDemo {
 	}else {
 		System.out.println("Name present");
 	}
+	Integer num[]= {5,3,7,8,5,4,1};
+	
+	List<Integer> ll =  Arrays.asList(num);
+	
+	//Collections.sort(ll);
+	Collections.reverse(ll);
+	
 	}
 }
+
+
+
