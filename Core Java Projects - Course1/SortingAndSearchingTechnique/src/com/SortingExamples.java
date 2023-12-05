@@ -26,6 +26,30 @@ class Sorting{
 		num[max]=temp;
 		}
 	}
+	
+	public static void bubbleSortAsc(int num[], int size) {
+		for(int i=0;i<size-1;i++) {
+			for(int j=0;j<size-1;j++) {
+				if(num[j]>num[j+1]) {
+					int temp = num[j];
+					num[j]=num[j+1];
+					num[j+1]=temp;
+				}
+			}
+		}
+	}
+	
+	public static void bubbleSortDesc(int num[], int size) {
+		for(int i=0;i<size-1;i++) {
+			for(int j=0;j<size-1;j++) {
+				if(num[j]<num[j+1]) {
+					int temp = num[j];
+					num[j]=num[j+1];
+					num[j+1]=temp;
+				}
+			}
+		}
+	}
 }
 public class SortingExamples {
 	public static void main(String[] args) {
@@ -34,13 +58,15 @@ public class SortingExamples {
 	for(int i=0;i<num.length;i++) {
 		System.out.print(num[i]+" ");
 	}
-	Sorting.selectionSortAsc(num, num.length);
+	//Sorting.selectionSortAsc(num, num.length);
+	Sorting.bubbleSortAsc(num, num.length);
 	System.out.println();
 	System.out.println("After sort Asc");
 	for(int i=0;i<num.length;i++) {
 		System.out.print(num[i]+" ");
 	}
-	Sorting.selectionSortDesc(num, num.length);
+	//Sorting.selectionSortDesc(num, num.length);
+	Sorting.bubbleSortDesc(num, num.length);
 	System.out.println();
 	System.out.println("After sort Desc");
 	for(int i=0;i<num.length;i++) {
