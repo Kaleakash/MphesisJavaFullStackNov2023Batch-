@@ -20,6 +20,7 @@ public class CameraRentalUtility {
 			System.out.println("Failure try once again");
 		}
 	}
+	
 	private static void mainOption() {
 		int choice;
 		String con="";

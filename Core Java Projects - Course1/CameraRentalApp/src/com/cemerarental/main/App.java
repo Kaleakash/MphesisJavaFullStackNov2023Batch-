@@ -10,6 +10,9 @@ public class App {
 		System.out.println("Welcome to Camera Rental App");
 		System.out.println("-----------------------------");
 		CameraRentalUtility.login();
+		
+		
+		System.out.println("Thank you Visit Again!");
 	}
 
 }
