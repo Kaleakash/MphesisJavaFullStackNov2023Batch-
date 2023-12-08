@@ -1,5 +1,6 @@
 package com;
 import java.sql.*;
+import java.util.Scanner;
 public class DemoTest {
 
 	public static void main(String[] args) {
@@ -38,11 +39,33 @@ public class DemoTest {
 //			}
 			
 			// Retrieve query 
-			ResultSet rs = stmt.executeQuery("select * from employee");
-			while(rs.next()) {
-				//System.out.println(" Id "+rs.getInt(1)+" Name is "+rs.getString(2)+" Salary is "+rs.getFloat(3));
-				System.out.println(" Id "+rs.getInt("id")+" Name is "+rs.getString("name")+" Salary is "+rs.getFloat("salary"));
+//			ResultSet rs = stmt.executeQuery("select * from employee");
+//			while(rs.next()) {
+//				//System.out.println(" Id "+rs.getInt(1)+" Name is "+rs.getString(2)+" Salary is "+rs.getFloat(3));
+//				System.out.println(" Id "+rs.getInt("id")+" Name is "+rs.getString("name")+" Salary is "+rs.getFloat("salary"));
+//			}
+			
+			Scanner sc = new Scanner(System.in);
+			// Insert Query using PreparedStatement
+			PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
+			
+			System.out.println("Enter the id");
+			int id = sc.nextInt();
+				pstmt.setInt(1, id);
+			
+			System.out.println("Enter the name");
+			String name = sc.next();
+				pstmt.setString(2, name);
+			
+			System.out.println("Enter the salary");
+			float salary = sc.nextFloat();
+				pstmt.setFloat(3, salary);
+			
+			int result = pstmt.executeUpdate();
+			if(result>0) {
+				System.out.println("Record inserted successfully");
 			}
+			
 		} catch (Exception e) {
 			System.out.println(e);  // toString method to display exception 
 		}
