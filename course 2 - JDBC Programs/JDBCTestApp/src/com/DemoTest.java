@@ -47,23 +47,38 @@ public class DemoTest {
 			
 			Scanner sc = new Scanner(System.in);
 			// Insert Query using PreparedStatement
-			PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
+//			PreparedStatement pstmt = con.prepareStatement("insert into employee values(?,?,?)");
+//			
+//			System.out.println("Enter the id");
+//			int id = sc.nextInt();
+//				pstmt.setInt(1, id);
+//			
+//			System.out.println("Enter the name");
+//			String name = sc.next();
+//				pstmt.setString(2, name);
+//			
+//			System.out.println("Enter the salary");
+//			float salary = sc.nextFloat();
+//				pstmt.setFloat(3, salary);
+//			
+//			int result = pstmt.executeUpdate();
+//			if(result>0) {
+//				System.out.println("Record inserted successfully");
+//			}
+			
+			// Delete Query using PreparedStatement
+			PreparedStatement pstmt = con.prepareStatement("delete from employee where id = ?");
 			
 			System.out.println("Enter the id");
 			int id = sc.nextInt();
-				pstmt.setInt(1, id);
-			
-			System.out.println("Enter the name");
-			String name = sc.next();
-				pstmt.setString(2, name);
-			
-			System.out.println("Enter the salary");
-			float salary = sc.nextFloat();
-				pstmt.setFloat(3, salary);
+			pstmt.setInt(1, id);
 			
 			int result = pstmt.executeUpdate();
+			
 			if(result>0) {
-				System.out.println("Record inserted successfully");
+				System.out.println("Record deleted successfully");
+			}else {
+				System.out.println("Record not present");
 			}
 			
 		} catch (Exception e) {
