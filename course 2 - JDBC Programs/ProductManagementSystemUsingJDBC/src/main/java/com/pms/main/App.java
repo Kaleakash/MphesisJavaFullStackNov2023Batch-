@@ -1,5 +1,6 @@
 package com.pms.main;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.pms.bean.Product;
@@ -17,7 +18,7 @@ public class App {
 		String result;
 		ProductService ps = new ProductService();
 		do {
-			System.out.println("1:Add, 2 : Delete, 3 : Update 4: Retrieve");
+			System.out.println("1:Add, 2 : Delete, 3 : Update 4: Retrieve 5 : Search Product");
 			System.out.println("Plz enter your choice");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -46,9 +47,16 @@ public class App {
 					result = ps.updateProduct(pp2);
 					System.out.println(result);
 					break;
-			case 4:
-	
+			case 4: List<Product> listOfProduct = ps.findAllProduct();
+					for(Product p : listOfProduct) {
+						System.out.println(p);   // it will call toString method
+					}
 				break;
+			case 5:System.out.println("Plz enter product id");
+			         pid = sc.nextInt();
+			         result = ps.findProduct(pid);
+			         System.out.println(result);
+			         break;
 			default:System.out.println("Wrong choice");
 					break;
 			}
