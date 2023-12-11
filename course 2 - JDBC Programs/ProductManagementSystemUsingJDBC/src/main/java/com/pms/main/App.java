@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.pms.bean.Product;
+import com.pms.service.OrdersService;
 import com.pms.service.ProductService;
 
 public class App {
@@ -17,8 +18,9 @@ public class App {
 		float price;
 		String result;
 		ProductService ps = new ProductService();
+		OrdersService os = new OrdersService();
 		do {
-			System.out.println("1:Add, 2 : Delete, 3 : Update 4: Retrieve 5 : Search Product");
+			System.out.println("1:Add, 2 : Delete, 3 : Update 4: Retrieve 5 : Search Product 6 : Place Order");
 			System.out.println("Plz enter your choice");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -57,6 +59,15 @@ public class App {
 			         result = ps.findProduct(pid);
 			         System.out.println(result);
 			         break;
+			case 6:	List<Product> listOfProduct1 = ps.findAllProduct();
+				for(Product p : listOfProduct1) {
+					System.out.println(p);   // it will call toString method
+					}
+					System.out.println("Please enter product id which you want to place the order");
+					pid = sc.nextInt();
+					result = os.placeOrder(pid);
+					System.out.println(result);
+					break;
 			default:System.out.println("Wrong choice");
 					break;
 			}
