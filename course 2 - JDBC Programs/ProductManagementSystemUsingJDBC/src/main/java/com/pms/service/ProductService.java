@@ -19,15 +19,23 @@ public class ProductService {
 		
 	}
 	
-	public void dleteProduct() {
-		// condition 
-		pd.deleteProduct();
+	public String  deteProduct(int pid) {
+		if(pd.deleteProduct(pid)>0) {
+			return "Product information deleted successfully";
+		}else {
+			return "Product not present";
+		}
 		
 	}
 	
-	public void updateProduct() {
-		// condition 
-		pd.updateProduct();
+	public String updateProduct(Product product) {
+		
+		
+		if(pd.updateProduct(product)>0) {
+			return "Product information updated successfully";
+		}else {
+			return "Product not present";
+		}
 		
 	}
 	

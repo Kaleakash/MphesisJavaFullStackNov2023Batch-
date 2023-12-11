@@ -30,13 +30,22 @@ public class App {
 					Product pp1 = new Product(pid, pname, price);
 					result = ps.storeProduct(pp1);
 					System.out.println(result);
-				break;
-			case 2:
-				
-				break;	
-			case 3:
-				
-				break;
+					break;
+			case 2:System.out.println("Plz enter the pid");
+					pid = sc.nextInt();
+					result = ps.deteProduct(pid);
+					System.out.println(result);
+					break;	
+			case 3:System.out.println("Plz enter the pid");
+					pid = sc.nextInt();
+					System.out.println("Plz enter the price");
+					price = sc.nextFloat();
+					Product pp2 = new Product();
+					pp2.setPid(pid);
+					pp2.setPrice(price);
+					result = ps.updateProduct(pp2);
+					System.out.println(result);
+					break;
 			case 4:
 	
 				break;

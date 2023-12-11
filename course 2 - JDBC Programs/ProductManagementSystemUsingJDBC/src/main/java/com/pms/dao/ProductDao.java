@@ -24,12 +24,31 @@ public class ProductDao {
 		}
 	}
 	
-	public void deleteProduct() {
-		
+	public int deleteProduct(int pid) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+			PreparedStatement pstmt = con.prepareStatement("delete from product where pid = ?");
+			pstmt.setInt(1, pid);
+			return pstmt.executeUpdate();
+			} catch (Exception e) {
+			System.err.println("Product delete exception"+e);
+				return 0;
+			}
 	}
 
-	public void updateProduct() {
-	
+	public int updateProduct(Product product) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+			PreparedStatement pstmt = con.prepareStatement("update product set price  =? where pid = ? ");
+			pstmt.setInt(2, product.getPid());
+			pstmt.setFloat(1, product.getPrice());
+			return pstmt.executeUpdate();
+			} catch (Exception e) {
+				System.err.println("Product update exception"+e);
+				return 0;
+			}
 	}
 
 	public void retrieveProduct() {
