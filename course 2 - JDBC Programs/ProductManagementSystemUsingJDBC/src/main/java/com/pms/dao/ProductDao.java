@@ -8,14 +8,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.pms.bean.Product;
+import com.pms.resource.DbResource;
 
 public class ProductDao {
 
 	
 	public int storeProduct(Product product) {
 		try {
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+//	Class.forName("com.mysql.cj.jdbc.Driver");
+//	Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+			Connection con = DbResource.getDbConnection();
 	PreparedStatement pstmt = con.prepareStatement("insert into product values(?,?,?)");
 	pstmt.setInt(1, product.getPid());
 	pstmt.setString(2, product.getPname());
@@ -29,8 +31,9 @@ public class ProductDao {
 	
 	public int deleteProduct(int pid) {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+			Connection con = DbResource.getDbConnection();
 			PreparedStatement pstmt = con.prepareStatement("delete from product where pid = ?");
 			pstmt.setInt(1, pid);
 			return pstmt.executeUpdate();
@@ -42,8 +45,9 @@ public class ProductDao {
 
 	public int updateProduct(Product product) {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+			Connection con = DbResource.getDbConnection();
 			PreparedStatement pstmt = con.prepareStatement("update product set price  =? where pid = ? ");
 			pstmt.setInt(2, product.getPid());
 			pstmt.setFloat(1, product.getPrice());
@@ -56,8 +60,9 @@ public class ProductDao {
 
 	public Product findProduct(int pid) {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+			Connection con = DbResource.getDbConnection();
 			PreparedStatement pstmt = con.prepareStatement("select * from product where pid=?");
 			pstmt.setInt(1, pid);
 			ResultSet rs = pstmt.executeQuery();
@@ -77,8 +82,9 @@ public class ProductDao {
 	public List<Product> retrieveProduct() {
 			List<Product> listOfProduct = new ArrayList<>();
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
+		Connection con = DbResource.getDbConnection();
 			PreparedStatement pstmt = con.prepareStatement("select * from product");
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()) {
