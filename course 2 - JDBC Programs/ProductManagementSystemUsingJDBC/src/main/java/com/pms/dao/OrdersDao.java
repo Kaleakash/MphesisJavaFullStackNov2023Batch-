@@ -26,20 +26,22 @@ public class OrdersDao {
 		}
 	}
 	
-	public List<Product> findOrderDetails() {
-		List<Product> listOfProduct = new ArrayList<>();
+	public List<Object[]> findOrderDetails() {
+		List<Object[]> listOrderDetails = new ArrayList<Object[]>();
 	try {
 
 	Connection con = DbResource.getDbConnection();
 		PreparedStatement pstmt = con.prepareStatement("select p.pname,o.orderdate from product p, orders o where p.pid = o.pid");
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()) {
-			
-			
+			Object obj[]=new Object[2];		// depending upon the number of columns using join. 
+			obj[0]=rs.getString(1);
+			obj[1]=rs.getString(2);
+			listOrderDetails.add(obj);
 		}
 		} catch (Exception e) {
 			System.err.println("Search product by id"+e);
 		}
-	return listOfProduct;
+	return listOrderDetails;
 }
 }

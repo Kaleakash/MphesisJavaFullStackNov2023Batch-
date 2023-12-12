@@ -1,5 +1,7 @@
 package com.pms.service;
 
+import java.util.List;
+
 import com.pms.bean.Product;
 import com.pms.dao.OrdersDao;
 import com.pms.dao.ProductDao;
@@ -19,5 +21,9 @@ public class OrdersService {
 		}else {
 			return "Order didn't place";
 		}
+	}
+	
+	public List<Object[]> getAllOderDetails() {
+		return od.findOrderDetails();
 	}
 }

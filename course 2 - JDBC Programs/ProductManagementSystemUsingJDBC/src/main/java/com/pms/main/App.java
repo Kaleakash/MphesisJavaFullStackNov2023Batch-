@@ -1,5 +1,6 @@
 package com.pms.main;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class App {
 		ProductService ps = new ProductService();
 		OrdersService os = new OrdersService();
 		do {
-			System.out.println("1:Add, 2 : Delete, 3 : Update 4: Retrieve 5 : Search Product 6 : Place Order");
+			System.out.println("1:Add, 2 : Delete, 3 : Update 4: Retrieve 5 : Search Product 6 : Place Order 7 : Order details ");
 			System.out.println("Plz enter your choice");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -68,6 +69,14 @@ public class App {
 					result = os.placeOrder(pid);
 					System.out.println(result);
 					break;
+			case 7 :System.out.println("All Order details are ");
+					List<Object[]> ll = os.getAllOderDetails();
+			        Iterator<Object[]> li = ll.iterator();
+			        while(li.hasNext()) {
+			        	Object obj[] = (Object[])li.next();
+			        	System.out.println("Product name "+obj[0]+" Order Date "+obj[1]);
+			        }
+			        break;
 			default:System.out.println("Wrong choice");
 					break;
 			}
