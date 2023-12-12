@@ -19,23 +19,34 @@ public class App {
 	
 	Session session = sf.openSession();        // Like a Statement as well as PreparedStatement
 	
-	// Now we will create entity class object 
-	Employee emp1 = new Employee();
-	emp1.setId(100);
-	emp1.setName("Ravi");
-	emp1.setSalary(12000);
+	// Insert the record 
+//	// Now we will create entity class object 
+//	Employee emp1 = new Employee();
+//	emp1.setId(103);
+//	emp1.setName("Rajesh");
+//	emp1.setSalary(18000);
+//	
+//	// Create Transaction object 
+//				Transaction tran = session.getTransaction();
+//				tran.begin();
+//				
+//					session.save(emp1);				// like a insert query 
+//	
+//				tran.commit();
+//				
+//				System.out.println("Record inserted successfully");
 	
-	// Create Transaction object 
+	// Delete Query 
+	Employee emp2  = session.find(Employee.class, 100);		// select * from employee where id =100;
+			if(emp2==null) {
+				System.out.println("Record not present");
+			}else {
 				Transaction tran = session.getTransaction();
 				tran.begin();
-				
-					session.save(emp1);				// like a insert query 
-	
+				session.delete(emp2);
 				tran.commit();
-				
-				System.out.println("Record inserted successfully");
-				
-	
+				System.out.println("Record deleted successfully");
+			}
 	}
 
 }
