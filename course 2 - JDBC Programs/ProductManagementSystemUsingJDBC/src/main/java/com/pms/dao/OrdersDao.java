@@ -31,12 +31,14 @@ public class OrdersDao {
 	try {
 
 	Connection con = DbResource.getDbConnection();
-		PreparedStatement pstmt = con.prepareStatement("select p.pname,o.orderdate from product p, orders o where p.pid = o.pid");
+		PreparedStatement pstmt = con.prepareStatement("select o.oid,o.orderdate,p.pname,p.price from orders o, product p where o.pid=p.pid;");
 		ResultSet rs = pstmt.executeQuery();
 		while(rs.next()) {
-			Object obj[]=new Object[2];		// depending upon the number of columns using join. 
-			obj[0]=rs.getString(1);
+			Object obj[]=new Object[4];		// depending upon the number of columns using join. 
+			obj[0]=rs.getInt(1);
 			obj[1]=rs.getString(2);
+			obj[2]=rs.getString(3);
+			obj[3]=rs.getFloat(4);
 			listOrderDetails.add(obj);
 		}
 		} catch (Exception e) {

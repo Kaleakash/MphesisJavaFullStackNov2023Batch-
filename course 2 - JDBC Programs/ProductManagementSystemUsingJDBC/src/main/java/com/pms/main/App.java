@@ -74,7 +74,7 @@ public class App {
 			        Iterator<Object[]> li = ll.iterator();
 			        while(li.hasNext()) {
 			        	Object obj[] = (Object[])li.next();
-			        	System.out.println("Product name "+obj[0]+" Order Date "+obj[1]);
+			        	System.out.println("Order Id "+obj[0]+" Order Date "+obj[1]+" PName "+obj[2]+" Price "+obj[3]);
 			        }
 			        break;
 			default:System.out.println("Wrong choice");
