@@ -24,8 +24,8 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		//MenuOption.trainerMenuOption();
-			MenuOption.studentMenuOption();
+		MenuOption.trainerMenuOption();
+		//MenuOption.studentMenuOption();
 	}
 
 }
