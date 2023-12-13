@@ -69,11 +69,31 @@ public class TrainerDao {
 		public List<Trainer> findAllTrainers() {
 			SessionFactory sf = HibernateResource.getSessionFactory();
 			Session session = sf.openSession();
-			TypedQuery tq	= session.createQuery("select t from Trainer t");
+			//TypedQuery tq	= session.createQuery("select t from Trainer t");
+			//TypedQuery tq	= session.createQuery("from Trainer t");
+			TypedQuery tq	= session.createQuery("from Trainer");
 			List<Trainer> listOfTrainer = tq.getResultList();
 			return listOfTrainer;
 		}
+		public List<String> findAllTrainerNames() {
+			SessionFactory sf = HibernateResource.getSessionFactory();
+			Session session = sf.openSession();
+			//TypedQuery tq	= session.createQuery("select t from Trainer t");
+			//TypedQuery tq	= session.createQuery("from Trainer t");
+			TypedQuery tq	= session.createQuery("select t.tname from Trainer t");
+			List<String> trainerNames = tq.getResultList();
+			return trainerNames;
+		}
 		
+		public List<Object[]> findAllTrainerIdAndName() {
+			SessionFactory sf = HibernateResource.getSessionFactory();
+			Session session = sf.openSession();
+			//TypedQuery tq	= session.createQuery("select t from Trainer t");
+			//TypedQuery tq	= session.createQuery("from Trainer t");
+			TypedQuery tq	= session.createQuery("select t.tid, t.tname from Trainer t");
+			List<Object[]> trainerNames = tq.getResultList();
+			return trainerNames;
+		}
 		
 }
 

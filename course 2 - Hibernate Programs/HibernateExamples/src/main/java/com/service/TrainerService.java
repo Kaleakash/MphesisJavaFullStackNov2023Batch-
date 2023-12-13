@@ -43,4 +43,12 @@ public class TrainerService {
 	public List<Trainer> findAllTrainer() {
 		return td.findAllTrainers();
 	}
+	
+	public List<String> findAllTraierNames() {
+		return td.findAllTrainerNames();
+	}
+	
+	public List<Object[]> findAllTraierIdNameNames() {
+		return td.findAllTrainerIdAndName();
+	}
 }

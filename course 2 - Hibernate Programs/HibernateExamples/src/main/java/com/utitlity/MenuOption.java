@@ -18,7 +18,7 @@ public class MenuOption {
 		TrainerService ts = new TrainerService();
 		do {
 			System.out.println("Trainer Menu");
-			System.out.println("1:Add 2: Delete, 3 : Update 4 : Find 5 : Retrieve All Trainer");
+System.out.println("1:Add 2: Delete, 3 : Update 4 : Find 5 : Retrieve All Trainer 6: All Trainer names 7 : Trainer partial property ");
 			System.out.println("Enter your choice");
 			choice = sc.nextInt();
 			switch (choice) {
@@ -53,6 +53,16 @@ public class MenuOption {
 			      }
 	
 				break;
+			case 6:List<String> listOfNames = ts.findAllTraierNames();
+			     	for(String name:listOfNames) {
+			     		System.out.println(name);
+			     	}
+			     	break;
+			case 7:List<Object[]> listOfIdAndNames = ts.findAllTraierIdNameNames();
+	     	for(Object obj[]:listOfIdAndNames) {
+	     		System.out.println("Id is "+obj[0]+" Name is "+obj[1]);
+	     	}
+	     	break;
 			default:
 				break;
 			}
