@@ -3,7 +3,9 @@ package com.utitlity;
 import java.util.List;
 import java.util.Scanner;
 
+import com.entity.Student;
 import com.entity.Trainer;
+import com.service.StudentService;
 import com.service.TrainerService;
 
 public class MenuOption {
@@ -63,6 +65,54 @@ System.out.println("1:Add 2: Delete, 3 : Update 4 : Find 5 : Retrieve All Traine
 	     		System.out.println("Id is "+obj[0]+" Name is "+obj[1]);
 	     	}
 	     	break;
+			default:
+				break;
+			}
+			System.out.println("Do you want to continue?");
+			con = sc.next();
+		}while(con.equals("y"));
+		
+		
+	}
+	
+	
+	public static void studentMenuOption() {
+		int choice;
+		String con="";
+		int sid;
+		String sname;
+		int age;
+		int tsid;
+		String result;
+		StudentService ss = new StudentService();
+		TrainerService ts = new TrainerService();
+		do {
+			System.out.println("Student Menu");
+			System.out.println("1:Add 2: Retrive All Student");
+			System.out.println("Enter your choice");
+			choice = sc.nextInt();
+			switch (choice) {
+			case 1:System.out.println("Enter student id");
+			      sid = sc.nextInt();
+			      System.out.println("Enter student name");
+			      sname= sc.next();
+			      System.out.println("Enter student age");
+			      age = sc.nextInt();
+			      List<Trainer> listOfTrainer = ts.findAllTrainer();
+			      for(Trainer t : listOfTrainer) {
+			    	  System.out.println("Trainer is "+t.getTid());
+			      }
+			      System.out.println("Enter trainer id");
+			      tsid = sc.nextInt();
+			      Student s1 = new Student(sid, sname, age,tsid);
+			      result = ss.storeStudent(s1);
+			      System.out.println(result);
+				break;
+			case 2:List<Student> listOfStudent = ss.findAllStudents();
+			 	for(Student s:listOfStudent) {
+			 		System.out.println(s);  // all student details 
+			 	}
+	     		break;
 			default:
 				break;
 			}
