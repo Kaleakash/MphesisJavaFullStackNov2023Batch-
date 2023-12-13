@@ -10,7 +10,7 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         
-        <mapping class="com.bean.Employee"/>
+        <mapping class="com.entity.Trainer"/>
         
     </session-factory>
 </hibernate-configuration>
