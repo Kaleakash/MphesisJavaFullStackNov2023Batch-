@@ -49,20 +49,28 @@ public class App {
 //			}
 	
 	// update Query 
-		Employee emp2  = session.find(Employee.class, 101);		// select * from employee where id =100;
-				if(emp2==null) {
-					System.out.println("Record not present");
-				}else {
-					Transaction tran = session.getTransaction();
-					tran.begin();
-					
-					emp2.setSalary(18000);			// change salary 
-					
-					session.update(emp2);
-					
-					tran.commit();
-					System.out.println("Record updated successfully");
-				}
+//		Employee emp2  = session.find(Employee.class, 101);		// select * from employee where id =100;
+//				if(emp2==null) {
+//					System.out.println("Record not present");
+//				}else {
+//					Transaction tran = session.getTransaction();
+//					tran.begin();
+//					
+//					emp2.setSalary(18000);			// change salary 
+//					
+//					session.update(emp2);
+//					
+//					tran.commit();
+//					System.out.println("Record updated successfully");
+//				}
+				
+		// select the record using primary key. 
+//		Employee emp2  = session.find(Employee.class, 1002);		// select * from employee where id =100;
+//		if(emp2==null) {
+//		System.out.println("Record not present");
+//			}else {
+//				System.out.println(emp2);    // call toString method 
+//			}
 	}
 
 }
