@@ -2,6 +2,7 @@ package com.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -13,9 +14,8 @@ public class Trainer {
 @Id
 private int tid;
 private String tname;
-@OneToOne
-private Student std;
-@OneToMany							// one trainer handle more than one students. 
+
+@OneToMany(cascade = CascadeType.ALL)		// 						// one trainer handle more than one students. 
 @JoinColumn(name = "tsid")			// join column is use to link student class fk column 
 private List<Student> listOfStudents;
 public Trainer() {

@@ -1,5 +1,6 @@
 package com.utitlity;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,8 +29,28 @@ System.out.println("1:Add 2: Delete, 3 : Update 4 : Find 5 : Retrieve All Traine
 					tid = sc.nextInt();
 					System.out.println("Enter trainer name");
 					tname = sc.next();
+					List<Student> listOfStd = new ArrayList<>();
+					System.out.println("how many student details do you want to store");
+					int studentCount = sc.nextInt();
+					System.out.println("Enter the students one by one");
+					for(int i=0;i<studentCount;i++) {
+						  System.out.println("Enter student id");
+					      int sid = sc.nextInt();
+					      System.out.println("Enter student name");
+					      String sname= sc.next();
+					      System.out.println("Enter student age");
+					      int age = sc.nextInt();
+					      Student s = new Student();
+					      s.setSid(sid);
+					      s.setSname(sname);
+					      s.setAge(age);
+					      s.setTsid(tid);
+					      listOfStd.add(s);
+					}
 					Trainer t1 = new Trainer(tid, tname);
+						t1.setListOfStudents(listOfStd);
 					result = ts.storeTrainer(t1);
+					System.out.println(result);
 				break;
 			case 2:System.out.println("Enter trainer id");
 			tid = sc.nextInt();
