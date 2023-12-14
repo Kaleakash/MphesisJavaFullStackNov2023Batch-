@@ -11,7 +11,7 @@ public class Employees {
 private int eid;
 private String ename;
 private float salary;
-private Integer pid;
+private Integer pid;				// FK 
 @OneToOne
 @JoinColumn(name = "eid")		// to link in address table for FK
 private Address adress;
