@@ -3,6 +3,7 @@ package com;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,11 +30,17 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		String email = request.getParameter("emailid");
 		String password = request.getParameter("pass");
+		RequestDispatcher rd1 = request.getRequestDispatcher("Home");
+		RequestDispatcher rd2 = request.getRequestDispatcher("login.html");
+		
 		if(email.equals("akash@gmail.com") && password.equals("123")) {
-			pw.println("successfully login with get method");
+		pw.println("successfully login with get method");
+			rd1.forward(request, response);
 		}else {
 			pw.println("failure try once again with get method");
+			rd2.include(request, response);
 		}
+		response.setContentType("text/html");	// content consider as html 
 		//pw.println("your emaili id is  "+email);
 	}
 
@@ -44,11 +51,16 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		String email = request.getParameter("emailid");
 		String password = request.getParameter("pass");
+		RequestDispatcher rd1 = request.getRequestDispatcher("Home");
+		RequestDispatcher rd2 = request.getRequestDispatcher("login.html");
 		if(email.equals("akash@gmail.com") && password.equals("123")) {
 			pw.println("successfully login with post method");
+			rd1.forward(request, response);
 		}else {
 			pw.println("failure try once again with post method");
+			rd2.include(request, response);
 		}
+		response.setContentType("text/html");	// content consider as html 
 	}
 
 }
