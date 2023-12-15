@@ -5,8 +5,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Login page</h2>
-<form action="LoginServlet">
+<h2>Login page with Get method </h2>
+<form action="LoginServlet" method="get">
 <label>EmailId</label>
 	<input type="email" name="emailid"/><br/>
 <label>Password</label>
@@ -15,6 +15,19 @@
 <input type="reset" value="reset"/>
 </form>
 <br/>
+
+<h2>Login page with Post method </h2>
+<form action="LoginServlet" method="post">
+<label>EmailId</label>
+	<input type="email" name="emailid"/><br/>
+<label>Password</label>
+	<input type="password" name="pass"/><br/>
+<input type="submit" value="SignIn"/>
+<input type="reset" value="reset"/>
+</form>
+<br/>
+
+
 <a href="index.html">Back</a>
 </body>
 </html>
