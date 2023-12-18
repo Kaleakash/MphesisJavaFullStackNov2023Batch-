@@ -36,6 +36,7 @@ public class SignUp extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		String emailid = request.getParameter("emailid");
 		String password = request.getParameter("password");
+		
 		RequestDispatcher rd = request.getRequestDispatcher("SignUp.html");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

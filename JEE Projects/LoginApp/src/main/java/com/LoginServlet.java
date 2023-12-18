@@ -40,6 +40,8 @@ public class LoginServlet extends HttpServlet {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
 		PreparedStatement pstmt = con.prepareStatement("select * from login where emailid = ? and password = ?");
+		// select l from Login l where l.emailid = ? and l.password = ?
+		//l.setParameter(1,emailid);
 		pstmt.setString(1, emailid);
 		pstmt.setString(2, password);
 		ResultSet rs = pstmt.executeQuery();
