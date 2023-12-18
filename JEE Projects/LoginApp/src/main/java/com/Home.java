@@ -35,7 +35,19 @@ public class Home extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
-		pw.println("Welcome to Home page");
+		Object obj	= request.getAttribute("user");
+		String emailid = (String)obj;
+		pw.println("Welcome to Home page "+emailid);
+		
+		// 
+		/*
+		 * 
+		 * 
+		 * 	in home.jsp 
+		Object obj	= request.getAttribute("user");
+		String emailid = (String)obj;
+		out.println("Welcome to Home page "+emailid);
+		 */
 	}
 
 }

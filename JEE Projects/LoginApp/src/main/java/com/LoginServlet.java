@@ -32,8 +32,8 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		PrintWriter pw = response.getWriter();
-		String emailid = request.getParameter("emailid");
-		String password = request.getParameter("password");
+	String emailid = request.getParameter("emailid");
+	String password = request.getParameter("password");
 		RequestDispatcher rd1 = request.getRequestDispatcher("Home");
 		RequestDispatcher rd2 = request.getRequestDispatcher("Login.html");
 		try {
@@ -46,7 +46,8 @@ public class LoginServlet extends HttpServlet {
 		pstmt.setString(2, password);
 		ResultSet rs = pstmt.executeQuery();
 		if(rs.next()) {
-			rd1.forward(request, response);
+				request.setAttribute("user", emailid);
+				rd1.forward(request, response);			// Home Page 
 		}else {
 			pw.println("EmailId or Password wrong, try once again!");
 			rd2.include(request, response);
