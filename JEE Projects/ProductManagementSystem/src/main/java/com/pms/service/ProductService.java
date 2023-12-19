@@ -1,5 +1,7 @@
 package com.pms.service;
 
+import java.util.List;
+
 import com.pms.dao.ProductDao;
 import com.pms.entity.Product;
 
@@ -14,5 +16,10 @@ public class ProductService {
 		}else {
 			return "Product didn't store";
 		}
+	}
+	
+	public List<Product> findAllProduct() {
+		// if we want we can apply some condition. 
+		return pd.findAllProduct();
 	}
 }
