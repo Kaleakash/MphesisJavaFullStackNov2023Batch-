@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginServlet
@@ -34,8 +35,9 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 	String emailid = request.getParameter("emailid");
 	String password = request.getParameter("password");
-		RequestDispatcher rd1 = request.getRequestDispatcher("Home");
+		//RequestDispatcher rd1 = request.getRequestDispatcher("Home");
 		RequestDispatcher rd2 = request.getRequestDispatcher("Login.html");
+	HttpSession hs = request.getSession();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb_phase2", "root", "root@123");
@@ -46,8 +48,10 @@ public class LoginServlet extends HttpServlet {
 		pstmt.setString(2, password);
 		ResultSet rs = pstmt.executeQuery();
 		if(rs.next()) {
-				request.setAttribute("user", emailid);
-				rd1.forward(request, response);			// Home Page 
+				//request.setAttribute("user", emailid);
+			hs.setAttribute("user", emailid);
+				//rd1.forward(request, response);			// Home Page , old request 
+				response.sendRedirect("Home");		// new request generated. 
 		}else {
 			pw.println("EmailId or Password wrong, try once again!");
 			rd2.include(request, response);
