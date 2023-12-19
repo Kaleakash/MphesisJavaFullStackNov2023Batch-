@@ -10,5 +10,6 @@
 <h2>Product Management System</h2>
 <a href="addProduct.jsp">Add Product</a> |
 <a href="ProductController">Display Product</a> |
+<a href="deleteProduct.jsp">Delete Product</a> |
 </body>
 </html>

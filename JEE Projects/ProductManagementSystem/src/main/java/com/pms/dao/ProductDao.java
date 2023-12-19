@@ -35,4 +35,24 @@ public class ProductDao {
 		List<Product> listOfProduct = tq.getResultList();
 		return listOfProduct;
 	}
+	
+	public int deleteProduct(int pid) {
+		
+			SessionFactory sf = SessionFactoryResource.getSessionFactory();
+			Session session = sf.openSession();
+			Transaction tran = session.getTransaction();
+			Product p = session.find(Product.class, pid);
+
+			if(p==null) {
+				return 0;
+			}else {
+				tran.begin();
+					session.delete(p);
+				tran.commit();
+				return 1;
+			}
+	}
 }
+
+
+

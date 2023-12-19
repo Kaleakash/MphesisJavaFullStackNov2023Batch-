@@ -48,9 +48,15 @@ public class ProductController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PrintWriter pw = response.getWriter();				// object created. 
+
+		// created service class object. 
+		ProductService ps = new ProductService();
 		
 		// receive the value from form 
 		
+		String operation = request.getParameter("operation");
+		
+		if(operation.equals("add")) {
 		String pname = request.getParameter("pname");
 		float price = Float.parseFloat(request.getParameter("price"));
 		String url = request.getParameter("url");
@@ -62,15 +68,23 @@ public class ProductController extends HttpServlet {
 		p.setPrice(price);
 		p.setUrl(url);
 		
-		// created service class object. 
-		ProductService ps = new ProductService();
+
 		String result = ps.storeProduct(p);
 		pw.print(result);
 		RequestDispatcher rd = request.getRequestDispatcher("addProduct.jsp");
 		rd.include(request, response);
+		
+		}else if(operation.equals("delete")) {
+			int pid = Integer.parseInt(request.getParameter("pid"));
+			String result = ps.deleteProduct(pid);
+			pw.println(result);
+			RequestDispatcher rd = request.getRequestDispatcher("deleteProduct.jsp");
+			rd.include(request, response);
+		}
+		
+		
 		response.setContentType("text/html");
-		
-		
 	}
 
+	
 }

@@ -22,4 +22,12 @@ public class ProductService {
 		// if we want we can apply some condition. 
 		return pd.findAllProduct();
 	}
+	
+	public String deleteProduct(int pid) {
+		if(pd.deleteProduct(pid)>0) {
+			return "Product deleted successfully";
+		}else {
+			return "Product not present";
+		}
+	}
 }

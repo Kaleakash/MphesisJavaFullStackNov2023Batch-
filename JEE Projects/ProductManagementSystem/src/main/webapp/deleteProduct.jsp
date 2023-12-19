@@ -7,16 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Add Product</h2>
+<h2>Delete Product</h2>
 <form action="ProductController" method="post">
-	<input type="hidden" name="operation" value="add">
-<label>PName</label>
-<input type="text" name="pname"/><br/>
-<label>Price</label>
-<input type="number" name="price"/><br/>
-<label>URL</label>
-<input type="url" name="url"/><br/>
-<input type="submit" value="Store Product"/>
+	<input type="hidden" name="operation" value="delete">
+<label>PId</label>
+<input type="number" name="pid"/><br/>
+<input type="submit" value="Delete Product"/>
 <input type="reset" value="reset"/>
 </form>
 <br/>
