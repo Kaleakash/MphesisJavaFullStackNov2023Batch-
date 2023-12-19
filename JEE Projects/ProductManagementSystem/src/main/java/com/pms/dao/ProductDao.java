@@ -7,7 +7,8 @@ import com.pms.entity.Product;
 import com.pms.resource.SessionFactoryResource;
 
 public class ProductDao {
-
+// alter table product modify column url varchar(10000);
+	//  alter table product modify column url blob;
 	public int storeProduct(Product product) {
 		try {
 			SessionFactory sf = SessionFactoryResource.getSessionFactory();

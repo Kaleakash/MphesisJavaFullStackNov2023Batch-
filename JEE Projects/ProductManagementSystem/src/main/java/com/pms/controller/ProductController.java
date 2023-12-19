@@ -3,6 +3,7 @@ package com.pms.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.pms.entity.Product;
+import com.pms.service.ProductService;
 
 /**
  * Servlet implementation class ProductController
@@ -54,6 +56,13 @@ public class ProductController extends HttpServlet {
 		p.setPrice(price);
 		p.setUrl(url);
 		
+		// created service class object. 
+		ProductService ps = new ProductService();
+		String result = ps.storeProduct(p);
+		pw.print(result);
+		RequestDispatcher rd = request.getRequestDispatcher("addProduct.jsp");
+		rd.include(request, response);
+		response.setContentType("text/html");
 		
 		
 	}
