@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.pms.entity.Product;
+
 /**
  * Servlet implementation class ProductController
  */
@@ -44,6 +46,14 @@ public class ProductController extends HttpServlet {
 		String pname = request.getParameter("pname");
 		float price = Float.parseFloat(request.getParameter("price"));
 		String url = request.getParameter("url");
+		
+		// convert those value to objects. 
+		
+		Product p = new Product();
+		p.setPname(pname);
+		p.setPrice(price);
+		p.setUrl(url);
+		
 		
 		
 	}
