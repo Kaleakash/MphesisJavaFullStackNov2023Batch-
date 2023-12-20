@@ -16,6 +16,7 @@
 		<th>PName</th>
 		<th>Price</th>
 		<th>URL</th>
+		<th>Action</th>
 	</tr>
 	<%
 		Object obj = session.getAttribute("products");
@@ -29,6 +30,13 @@
 				<td><%=p.getPname()%> </td>
 				<td><%=p.getPrice()%> </td>
 				<td><img src=<%=p.getUrl()%> width="50px" height="50px"/> </td>
+				<td>
+					<form action="ProductController" method="post">
+						<input type="hidden" name="operation" value="delete">
+						<input type="hidden" name="pid" value="<%=p.getPid()%>"/><br/>
+						<input type="submit" value="Delete Product"/>
+					</form>
+				</td>
 			</tr>
 			<%
 		}
