@@ -22,20 +22,23 @@ public class DemoTest {
 		//Employee e4 = (Employee)obj.getBean("emp2");
 		//e4.display();
 		
-		Employee e5 = (Employee)obj.getBean("emp1");	// emp1 empty singletone 
-		System.out.println(e5);                  // it will call toString method 
+//		Employee e5 = (Employee)obj.getBean("emp1");	// emp1 empty singletone 
+//		System.out.println(e5);                  // it will call toString method 
+//		
+//		Employee e6 = (Employee)obj.getBean("emp2");	// emp2 empty prototype 
+//		System.out.println(e6);                  // it will call toString method 
+//		
+//		Employee e7= (Employee)obj.getBean("emp3");		// emp3 parameter with singleton 
+//		System.out.println(e7);
+//		
+//		Employee e8 = (Employee)obj.getBean("emp4"); // setter base di it will call empty constructor using setter value get override
+//		System.out.println(e8);
+//		
+//		Address add1 = (Address)obj.getBean("address");
+//		System.out.println(add1);
 		
-		Employee e6 = (Employee)obj.getBean("emp2");	// emp2 empty prototype 
-		System.out.println(e6);                  // it will call toString method 
-		
-		Employee e7= (Employee)obj.getBean("emp3");		// emp3 parameter with singleton 
-		System.out.println(e7);
-		
-		Employee e8 = (Employee)obj.getBean("emp4"); // setter base di it will call empty constructor using setter value get override
-		System.out.println(e8);
-		
-		Address add1 = (Address)obj.getBean("address");
-		System.out.println(add1);
+		Employee e9 = (Employee)obj.getBean("employee");
+		System.out.println(e9);
 	}
 
 }

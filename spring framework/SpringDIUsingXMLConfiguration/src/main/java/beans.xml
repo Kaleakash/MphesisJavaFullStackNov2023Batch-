@@ -27,4 +27,11 @@
 	<property name="state" value="Kar"></property>
 </bean>
 
+<bean class="com.Employee" id="employee">
+	<property name="id" value="102"></property>
+	<property name="name" value="Reeta"></property>
+	<property name="salary" value="22000"></property>
+	<property name="add" ref="address"></property>
+</bean>
+
 </beans>
