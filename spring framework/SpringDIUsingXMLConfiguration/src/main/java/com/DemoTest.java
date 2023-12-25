@@ -30,6 +30,9 @@ public class DemoTest {
 		
 		Employee e7= (Employee)obj.getBean("emp3");		// emp3 parameter with singleton 
 		System.out.println(e7);
+		
+		Employee e8 = (Employee)obj.getBean("emp4"); // setter base di it will call empty constructor using setter value get override
+		System.out.println(e8);
 	}
 
 }
