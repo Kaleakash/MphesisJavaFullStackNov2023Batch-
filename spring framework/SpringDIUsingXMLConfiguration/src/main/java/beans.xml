@@ -21,4 +21,10 @@
 	<property name="salary" value="14000"></property>
 </bean>
 
+
+<bean class="com.Address" id="address">
+	<property name="city" value="Bangalore"></property>
+	<property name="state" value="Kar"></property>
+</bean>
+
 </beans>

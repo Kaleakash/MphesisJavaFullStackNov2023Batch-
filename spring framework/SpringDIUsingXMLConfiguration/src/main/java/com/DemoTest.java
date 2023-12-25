@@ -33,6 +33,9 @@ public class DemoTest {
 		
 		Employee e8 = (Employee)obj.getBean("emp4"); // setter base di it will call empty constructor using setter value get override
 		System.out.println(e8);
+		
+		Address add1 = (Address)obj.getBean("address");
+		System.out.println(add1);
 	}
 
 }
