@@ -15,6 +15,12 @@ public class DemoTest {
 		BeanFactory obj = new XmlBeanFactory(res);
 		Employee e1 = (Employee)obj.getBean("emp1");		// object class return type . done type casting 
 		e1.display();
+		//Employee e2 = (Employee)obj.getBean("emp2");
+		//e2.display();
+		Employee e3 = (Employee)obj.getBean("emp1");		// object class return type . done type casting 
+		e3.display();
+		//Employee e4 = (Employee)obj.getBean("emp2");
+		//e4.display();
 	}
 
 }
