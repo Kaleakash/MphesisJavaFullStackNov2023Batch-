@@ -63,6 +63,16 @@ return jdbcTemplate.update("delete from employee where id =?", id);
 			return null;
 		}
 	}
+	
+	public List<Employee> findEmployeeByRowMapperById(int id) {
+		try {
+			jdbcTemplate.q
+		return jdbcTemplate.query("select * from employee where id = ?", new MyRowMapper(),id);
+		} catch (Exception e) {
+			System.err.println(e);
+			return null;
+		}
+	}
 }
 // this class is responsible to convert each record as employee objects. 
 class MyRowMapper implements RowMapper<Employee>{
