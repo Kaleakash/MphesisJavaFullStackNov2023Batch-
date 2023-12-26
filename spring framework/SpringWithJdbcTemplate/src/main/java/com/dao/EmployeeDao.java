@@ -24,7 +24,7 @@ return jdbcTemplate.update("insert into employee values(?,?,?)", employee.getId(
 	
 	public int updateEmployee(Employee employee) {
 		try {
-return jdbcTemplate.update("udpate employee set salary = ? where id = ?",employee.getSalary(),employee.getId());	
+return jdbcTemplate.update("update employee set salary = ? where id = ?",employee.getSalary(),employee.getId());	
 		} catch (Exception e) {
 			System.err.println(e);
 			return 0;
