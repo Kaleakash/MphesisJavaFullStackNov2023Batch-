@@ -19,6 +19,9 @@ public class DemoTest {
 		add.setCity("Bangalore");
 		add.setState("Kar");
 		System.out.println(add);
+		System.out.println("----------------------");
+		Employee emp = (Employee)ac.getBean("employee");
+		System.out.println(emp);
 	}
 
 }
