@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+out.print(request.getAttribute("msg"));
+%>
+<br/>
 <h3>Account Create</h3>
 <form action="SignUp" method="post">
 <label>EmailId</label>
