@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Spring MVC Display page created...</h2>
+<h2>Spring MVC Display1 page created...</h2>
 </body>
 </html>
