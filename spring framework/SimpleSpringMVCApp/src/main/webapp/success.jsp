@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Welcome to Spring MVC Simple App</h2>
-<a  href="hi">Click Here to move display1 </a> |
-<a  href="hello">Click Here to move display2</a> |
-<a href="login.jsp">Login Page</a>
+<h2>Successfully login!</h2>
+<%
+Object obj = request.getAttribute("user");
+String user = (String)obj;
+out.println(user);
+%>
 </body>
 </html>
