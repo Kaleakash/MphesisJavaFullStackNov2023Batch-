@@ -66,7 +66,7 @@ return jdbcTemplate.update("delete from employee where id =?", id);
 	
 	public List<Employee> findEmployeeByRowMapperById(int id) {
 		try {
-			jdbcTemplate.q
+			//jdbcTemplate.q
 		return jdbcTemplate.query("select * from employee where id = ?", new MyRowMapper(),id);
 		} catch (Exception e) {
 			System.err.println(e);
