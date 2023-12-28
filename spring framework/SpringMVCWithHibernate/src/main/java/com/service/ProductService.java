@@ -1,5 +1,7 @@
 package com.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +20,9 @@ public class ProductService {
 		}else {
 			return "Product didn't store";
 		}
+	}
+	
+	public List<Product> findAllProduct() {
+		return productDao.findAllProduct();
 	}
 }

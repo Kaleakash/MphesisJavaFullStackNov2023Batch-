@@ -1,5 +1,9 @@
 package com.orm;
 
+import java.util.List;
+
+import javax.persistence.TypedQuery;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -16,6 +20,7 @@ public class ProductDao {
 	
 	public int storeProduct(Product product) {
 		try {
+			System.out.println("dao layer");
 			Session session = sf.openSession();
 			Transaction tran = session.getTransaction();
 			tran.begin();
@@ -26,5 +31,12 @@ public class ProductDao {
 			System.err.println(e);
 			return 0;
 		}
+	}
+	
+	public List<Product> findAllProduct() {
+		Session session = sf.openSession();
+		TypedQuery<Product> qry = session.createQuery("from Product");
+		List<Product> listOfProduct = qry.getResultList();
+		return listOfProduct;
 	}
 }
