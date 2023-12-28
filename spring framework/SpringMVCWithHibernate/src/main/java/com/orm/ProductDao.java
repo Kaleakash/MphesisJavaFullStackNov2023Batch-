@@ -53,6 +53,18 @@ public class ProductDao {
 		}
 	}
 	
+	public Product findProduct(int pid) {
+		try {
+			Session session = sf.openSession();
+			Product p = session.find(Product.class, pid);
+			return p;
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+		return null;
+	}
+	
+	
 	public List<Product> findAllProduct() {
 		Session session = sf.openSession();
 		TypedQuery<Product> qry = session.createQuery("from Product");

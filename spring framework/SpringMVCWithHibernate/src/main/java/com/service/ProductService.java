@@ -33,4 +33,8 @@ public class ProductService {
 			return "Product not present";
 		}
 	}
+	
+	public Product findProduct(int pid) {
+		return productDao.findProduct(pid);
+	}
 }
