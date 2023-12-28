@@ -14,6 +14,11 @@ import com.service.ProductService;
 @Controller
 public class ProductController {
 
+	/*
+	 * 
+	 * create table product(pid int primary key auto_increment, pname varchar(50), price float, url blob);
+	 * 
+	 */
 	@Autowired
 	ProductService productService;
 	
