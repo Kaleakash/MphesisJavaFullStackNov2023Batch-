@@ -33,6 +33,26 @@ public class ProductDao {
 		}
 	}
 	
+	public int deleteProduct(int pid) {
+		try {
+		
+			Session session = sf.openSession();
+			Transaction tran = session.getTransaction();
+			Product p = session.find(Product.class, pid);
+			if(p==null) {
+				return 0;
+			}else {
+				tran.begin();
+					session.delete(p);
+				tran.commit();
+				return 1;
+			}
+		} catch (Exception e) {
+			System.err.println(e);
+			return 0;
+		}
+	}
+	
 	public List<Product> findAllProduct() {
 		Session session = sf.openSession();
 		TypedQuery<Product> qry = session.createQuery("from Product");

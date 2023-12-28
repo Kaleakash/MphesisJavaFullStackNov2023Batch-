@@ -29,6 +29,7 @@ ${requestScope.msg}<br/>
 		<th>PName</th>
 		<th>Price</th>
 		<th>Image URL</th>
+		<th>Delete Product</th>
 	</tr>
 	<%
 	Object obj = session.getAttribute("products");
@@ -42,6 +43,14 @@ ${requestScope.msg}<br/>
 			<td><%=p.getPname()%> </td>
 			<td><%=p.getPrice()%> </td>
 			<td><img src=<%=p.getUrl()%> width="100px" height="100px"/></td>
+			<td>
+		<a href="deleteProduct?pid=<%=p.getPid()%>">
+			<img src="https://cdn-icons-png.flaticon.com/128/6861/6861362.png" 
+			
+			width="50px" height="50px"/>
+				
+		</a>
+			</td>
 		</tr>
 		<% 
 	}

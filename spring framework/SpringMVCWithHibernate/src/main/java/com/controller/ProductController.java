@@ -56,4 +56,18 @@ public class ProductController {
 		
 		return mav;
 	}
+	@RequestMapping(value = "deleteProduct",method = RequestMethod.GET)
+	public ModelAndView deleteProduct(HttpServletRequest req,HttpSession hs) {
+		int pid = Integer.parseInt(req.getParameter("pid"));
+		System.out.println("product id is "+pid);
+		ModelAndView mav = new ModelAndView();
+		String result = productService.deleteProduct(pid);
+		mav.addObject("msg", result);
+		List<Product> listOfProduct = productService.findAllProduct();
+		hs.setAttribute("products", listOfProduct);
+		mav.setViewName("products.jsp");
+		return mav;
+	}
+	
+	
 }
