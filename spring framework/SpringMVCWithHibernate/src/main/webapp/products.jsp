@@ -34,7 +34,7 @@ if(obj1!=null){
 		<h2>We are ready to update the product</h2>
 	<form action="updateProductFromDb" method="post">
 	<label>PId</label>
-	<input type="text" name="pname" value="<%=p.getPid()%>" readonly="readonly"><br/>
+	<input type="text" name="pid" value="<%=p.getPid()%>" readonly="readonly"><br/>
 	<label>PName</label>
 	<input type="text" name="pname" value="<%=p.getPname()%>"><br/>
 	<label>Price</label>

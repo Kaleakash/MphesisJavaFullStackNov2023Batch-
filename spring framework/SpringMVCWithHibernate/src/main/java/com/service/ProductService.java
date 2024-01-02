@@ -34,7 +34,19 @@ public class ProductService {
 		}
 	}
 	
+	
+	public String updateProduct(Product product) {
+		if(productDao.updateProduct(product)>0) {
+			return "Product updated successfully";
+		}else {
+			return "Product not present";
+		}
+	}
+	
+	
 	public Product findProduct(int pid) {
 		return productDao.findProduct(pid);
 	}
+	
+	
 }

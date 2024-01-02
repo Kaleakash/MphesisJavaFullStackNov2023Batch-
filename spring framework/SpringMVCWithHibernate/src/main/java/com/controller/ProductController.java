@@ -84,4 +84,31 @@ public class ProductController {
 		return mav;
 	}
 	
+	@RequestMapping(value = "updateProductFromDb",method = RequestMethod.POST)
+	public ModelAndView updateProductFromDb(HttpServletRequest req,HttpSession hs,Product product) {
+		int pid = Integer.parseInt(req.getParameter("pid"));
+		
+		String pname = req.getParameter("pname");
+		float price = Float.parseFloat(req.getParameter("price"));
+		String url = req.getParameter("url");
+		
+		product.setPid(pid);
+		product.setPname(pname);
+		product.setPrice(price);
+		product.setUrl(url);
+		
+		
+		String result = productService.updateProduct(product);
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("msg", result);
+		
+		List<Product> listOfProduct = productService.findAllProduct();
+		hs.setAttribute("products", listOfProduct);
+		
+		mav.setViewName("products.jsp");
+		mav.addObject("flag", false);
+		
+		return mav;
+	}
 }

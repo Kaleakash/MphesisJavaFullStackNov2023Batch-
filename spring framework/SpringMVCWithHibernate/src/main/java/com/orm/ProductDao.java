@@ -53,6 +53,31 @@ public class ProductDao {
 		}
 	}
 	
+	
+	public int updateProduct(Product product) {
+		try {
+		
+			Session session = sf.openSession();
+			Transaction tran = session.getTransaction();
+			Product p = session.find(Product.class, product.getPid());
+			if(p==null) {
+				return 0;
+			}else {
+				tran.begin();						
+					p.setPname(product.getPname());
+					p.setPrice(product.getPrice());
+					p.setUrl(product.getUrl());
+				session.update(p);
+				tran.commit();
+				return 1;
+			}
+		} catch (Exception e) {
+			System.err.println(e);
+			return 0;
+		}
+	}
+	
+	
 	public Product findProduct(int pid) {
 		try {
 			Session session = sf.openSession();
