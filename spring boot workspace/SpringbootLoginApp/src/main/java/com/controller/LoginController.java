@@ -16,10 +16,11 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/checkLogin",method = RequestMethod.POST)
-	public String loginCheckDetails(HttpServletRequest req) {	// DI HttpServletRequest 
+	public String loginCheckDetails(HttpServletRequest req,Model mm) {	// DI HttpServletRequest 
 		String emailid = req.getParameter("emailid");
 		String password = req.getParameter("password");
 		if(emailid.equals("akash@gmail.com") && password.equals("akash@123")) {
+		mm.addAttribute("msg", "akash@gmail.com");	// request.setAttribute("msg","akash@gmail.com");
 			return "success";
 		}else {
 			return "failure";
