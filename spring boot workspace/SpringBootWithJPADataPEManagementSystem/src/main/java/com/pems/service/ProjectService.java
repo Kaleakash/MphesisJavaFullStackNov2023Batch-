@@ -22,4 +22,29 @@ public class ProjectService {
 	public List<Project> findAllProjectDetails() {
 		return projectRepository.findAll();		// it is pre -defined method. 
 	}
+	
+	public String deleteProject(int pid) {
+		if(projectRepository.existsById(pid)) {		// if project details present it return true
+			projectRepository.deleteById(pid);
+			return "Project details deleted successfully";
+		}else {
+			return "Project details not present";
+		}
+	}
+	
+	public String updateProjectInfo(Project project) {
+		if(projectRepository.existsById(project.getPid())) {		// if project details present it return true
+			Project p = projectRepository.getById(project.getPid());	// p retrieve from database 
+					p.setPname(project.getPname());			// change old name by new name
+				projectRepository.saveAndFlush(p);
+			return "Project details updated successfully";
+		}else {
+			return "Project details not present";
+		}
+	}
 }
+
+
+
+
+

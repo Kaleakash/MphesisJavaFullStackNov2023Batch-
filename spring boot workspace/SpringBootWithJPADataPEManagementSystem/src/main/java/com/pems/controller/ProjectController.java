@@ -37,6 +37,33 @@ public class ProjectController {
 		model.addAttribute("projects", listOfProject);
 		return "viewProjects";
 	}
+	
+	@RequestMapping(value = "updateProject",method = RequestMethod.POST)
+	public String updateProject(HttpServletRequest req, Project project, Model model) {
+		
+		int pid = Integer.parseInt(req.getParameter("pid"));
+		String pname = req.getParameter("pname");
+		
+		project.setPid(pid);
+		project.setPname(pname);
+		
+		String result = projectService.updateProjectInfo(project);
+		model.addAttribute("msg", result);
+		return "updateProject";
+	}
+	
+	@RequestMapping(value = "deleteProject",method = RequestMethod.POST)
+	public String deleteProject(HttpServletRequest req, Model model) {
+		
+		int pid = Integer.parseInt(req.getParameter("pid"));
+		
+		String result = projectService.deleteProject(pid);
+		model.addAttribute("msg", result);
+		return "deleteProject";
+	}
+	
+	
+	
 }
 
 
