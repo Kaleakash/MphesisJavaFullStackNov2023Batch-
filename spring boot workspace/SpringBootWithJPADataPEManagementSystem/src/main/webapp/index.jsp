@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Failure try once again</h2>
-<%@include file="login.jsp" %>
+<h2>Project-Employee Management System!</h2>
+<a href="storeProject.jsp">Store Project</a><br/>
 </body>
 </html>
