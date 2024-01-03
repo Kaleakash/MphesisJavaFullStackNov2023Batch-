@@ -8,6 +8,7 @@
 </head>
 <body>
 <h2>Project-Employee Management System!</h2>
-<a href="storeProject.jsp">Store Project</a><br/>
+<a href="storeProject.jsp">Store Project</a>|
+<a href="findProjectInfo">View Projects</a>
 </body>
 </html>

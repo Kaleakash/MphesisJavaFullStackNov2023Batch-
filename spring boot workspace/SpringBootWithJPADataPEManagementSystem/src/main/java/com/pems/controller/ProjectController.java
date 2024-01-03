@@ -1,4 +1,6 @@
 package com.pems.controller;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +28,15 @@ public class ProjectController {
 		model.addAttribute("msg", result);
 		return "storeProject";
 	}
+
+	// http://localhost:9090/		with method as get 
 	
+	@RequestMapping(value = "findProjectInfo",method = RequestMethod.GET)
+	public String findAllProjectDetails(Model model) {
+		List<Project> listOfProject = projectService.findAllProjectDetails();
+		model.addAttribute("projects", listOfProject);
+		return "viewProjects";
+	}
 }
 
 
