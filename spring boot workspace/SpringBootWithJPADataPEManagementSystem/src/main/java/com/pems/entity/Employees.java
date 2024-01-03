@@ -3,13 +3,18 @@ package com.pems.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 @Entity
+@Component
+@Scope("prototype")
 public class Employees {
 @Id
 private int id;
 private String name;
 private int age;
-private int pid;
+private Integer pid;				// FK
 public int getId() {
 	return id;
 }
@@ -28,10 +33,10 @@ public int getAge() {
 public void setAge(int age) {
 	this.age = age;
 }
-public int getPid() {
+public Integer getPid() {
 	return pid;
 }
-public void setPid(int pid) {
+public void setPid(Integer pid) {
 	this.pid = pid;
 }
 @Override
