@@ -1,5 +1,6 @@
 package com.conroller;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,4 +29,23 @@ public class LoginController {
 		}
 	}
 	
+	// http://localhost:8080/singlePathParam/Raju
+	
+	@RequestMapping(value = "singlePathParam/{name}",method = RequestMethod.GET)
+	public String helloUserByPathParam(@PathVariable("name") String fname) {
+		return "Welcome user to spring boot with param param "+fname;
+	}
+	
+	 // http://localhost:8080/checkUserByPath/raj@gmail.com/123
+	 // http://localhost:8080/checkUserByPath/raju@gmail.com/123
+	
+	@RequestMapping(value = "checkUserByPath/{emailid}/{password}",method = RequestMethod.GET)
+	public String checkUserByPathParam(@PathVariable("emailid") String email, @PathVariable("password") String pass)
+	{
+		if(email.equalsIgnoreCase("raj@gmail.com") && pass.equals("123")) {
+			return "successfully login";
+		}else {
+			return "failure try once again";
+		}
+	}
 }
