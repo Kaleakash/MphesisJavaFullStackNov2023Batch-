@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.pems.entity.Employees;
 import com.pems.entity.Project;
@@ -57,5 +58,13 @@ public class EmployeesController {
 		
 		return "storeEmployee";
 		
+	}
+	@RequestMapping(value = "viewAllEmployee",method = RequestMethod.GET)
+	public String viewAllEmployees(Model model) {
+		
+		List<Employees> listOfEmp = employeeService.findAllEmployees();
+		model.addAttribute("employees", listOfEmp);
+	
+		return "viewAllEmployees";
 	}
 }

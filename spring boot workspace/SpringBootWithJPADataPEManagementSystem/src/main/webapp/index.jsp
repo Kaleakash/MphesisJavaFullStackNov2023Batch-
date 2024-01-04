@@ -13,5 +13,6 @@
 <a href="deleteProject.jsp">Delete Projects</a> |
 <a href="updateProject.jsp">Update Projects</a> |
 <a href="storeEmployeeInfo">Employee Store</a> |
+<a href="viewAllEmployee">View All Employees</a>
 </body>
 </html>
