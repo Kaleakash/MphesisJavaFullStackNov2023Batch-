@@ -62,7 +62,24 @@ public class ProjectController {
 		return "deleteProject";
 	}
 	
+	@RequestMapping(value = "ProjectAndEmployeeJoin",method = RequestMethod.GET)
+	public String findProjectAndEmployeeJoin(Model model) {
+		
+		List<Object[]> listOfProjectAndEmployee = projectService.findProjectAndEmployeeJoin();
+		model.addAttribute("projectemployeesinfo", listOfProjectAndEmployee);
+		
+		return "projectAndEmployeeJoin";
+	}
 	
+	@RequestMapping(value = "ProjectAndEmployeeJoinByProjectName",method = RequestMethod.GET)
+	public String findProjectAndEmployeeByProjectName(Model model,HttpServletRequest req) {
+		String projectName = req.getParameter("projectname");
+		System.out.println(projectName);
+		List<Object[]> listOfProjectAndEmployee = projectService.findProjectAndEmployeeByProject(projectName);
+		model.addAttribute("projectemployeesinfobyproject", listOfProjectAndEmployee);
+		
+		return "projectAndEmployeeJoinByProject";
+	}
 	
 }
 

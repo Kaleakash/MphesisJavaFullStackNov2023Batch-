@@ -26,14 +26,17 @@
 		Iterator<Project> li = listOfProject.iterator();
 		while(li.hasNext()){
 			Project p  = (Project)li.next();
+			%>
+			<tr>
+				<td><%=p.getPid()%></td>
+				<td><%=p.getPname() %></td>
+			<% 
 				List<Employees> emps = p.getListOfEmployees();
 				Iterator<Employees> li1 = emps.iterator();
 				while(li1.hasNext()){
 				Employees e = li1.next();		
 			%>
-			<tr>
-				<td><%=p.getPid()%></td>
-				<td><%=p.getPname() %></td>
+			
 				<td><%=e.getId()%></td>
 				<td><%=e.getName()%></td>
 				<td><%=e.getAge()%></td>

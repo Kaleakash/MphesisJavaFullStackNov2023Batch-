@@ -42,6 +42,14 @@ public class ProjectService {
 			return "Project details not present";
 		}
 	}
+	
+	public List<Object[]> findProjectAndEmployeeJoin() {
+		return projectRepository.findEmployeeAndProject();
+	}
+	
+	public List<Object[]> findProjectAndEmployeeByProject(String project) {
+		return projectRepository.findEmployeeAndProjectByProject(project);
+	}
 }
 
 
