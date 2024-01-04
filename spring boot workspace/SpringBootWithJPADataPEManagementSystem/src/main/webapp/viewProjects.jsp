@@ -1,3 +1,4 @@
+<%@page import="com.pems.entity.Employees"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.pems.entity.Project"%>
 <%@page import="java.util.List"%>
@@ -15,6 +16,9 @@
 	<tr>
 		<th>PId</th>
 		<th>ProjectName</th>
+		<th>Employee Id</th>
+		<th>Name</th>
+		<th>Age</th>
 	</tr>
 	<%
 		Object obj = request.getAttribute("projects");
@@ -22,12 +26,20 @@
 		Iterator<Project> li = listOfProject.iterator();
 		while(li.hasNext()){
 			Project p  = (Project)li.next();
+				List<Employees> emps = p.getListOfEmployees();
+				Iterator<Employees> li1 = emps.iterator();
+				while(li1.hasNext()){
+				Employees e = li1.next();		
 			%>
 			<tr>
 				<td><%=p.getPid()%></td>
 				<td><%=p.getPname() %></td>
+				<td><%=e.getId()%></td>
+				<td><%=e.getName()%></td>
+				<td><%=e.getAge()%></td>
 			</tr>
 			<%
+			}
 		}
 	%>
 </table>
