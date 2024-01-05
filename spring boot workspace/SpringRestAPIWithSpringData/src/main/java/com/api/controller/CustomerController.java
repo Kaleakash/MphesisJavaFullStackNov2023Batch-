@@ -38,6 +38,13 @@ public class CustomerController {
 	public String deleteCustomer(@PathVariable("cid") int cid) {
 		return customerService.deleteCustomerInfo(cid);
 	}
+	// http://localhost:8080/updateCustomer  data as {"cid":100,"age":34}
+	@RequestMapping(value = "updateCustomer",method = RequestMethod.PUT,consumes = MediaType.APPLICATION_JSON_VALUE)
+	public String updateCustomer(@RequestBody Customer customer) {	//@RequestBody annotation is use to extract json data from request body 
+		System.out.println(customer);     // toString method 
+		return customerService.updateCustomer(customer);
+	}
+	
 }
 
 

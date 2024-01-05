@@ -39,4 +39,17 @@ public class CustomerService {
 			return "Customer not present";
 		}
 	}
+	
+	public String updateCustomer(Customer customer) {
+		Optional<Customer> result = customerRepository.findById(customer.getCid());
+		if(result.isPresent()) {
+			Customer c = result.get();
+			c.setAge(24);
+			customerRepository.saveAndFlush(c);
+			return "Customer details updated successfully";
+		}else {
+			
+			return "Customer not present";
+		}
+	}
 }
