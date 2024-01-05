@@ -11,7 +11,7 @@ public class Address {
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int addid;
 private String city;
-private String stte;
+private String state;
 public int getAddid() {
 	return addid;
 }
@@ -24,11 +24,26 @@ public String getCity() {
 public void setCity(String city) {
 	this.city = city;
 }
-public String getStte() {
-	return stte;
+public String getState() {
+	return state;
 }
-public void setStte(String stte) {
-	this.stte = stte;
+public void setState(String state) {
+	this.state = state;
 }
+@Override
+public String toString() {
+	return "Address [addid=" + addid + ", city=" + city + ", state=" + state + "]";
+}
+public Address() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Address(int addid, String city, String state) {
+	super();
+	this.addid = addid;
+	this.city = city;
+	this.state = state;
+}
+
 
 }

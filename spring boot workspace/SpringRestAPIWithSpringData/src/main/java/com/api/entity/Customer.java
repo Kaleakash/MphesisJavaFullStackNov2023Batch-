@@ -3,6 +3,7 @@ package com.api.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -12,6 +13,7 @@ private int cid;
 private String cname;
 private int age;
 @OneToOne(cascade = CascadeType.ALL)// to do all crud operation on address 
+@JoinColumn(name = "addid")
 private Address add;
 public int getCid() {
 	return cid;
