@@ -28,4 +28,15 @@ public class CustomerService {
 	public List<Customer> findAllCustomer() {
 		return customerRepository.findAll();
 	}
+	
+	public String deleteCustomerInfo(int cid) {
+		Optional<Customer> result = customerRepository.findById(cid);
+		if(result.isPresent()) {
+			customerRepository.deleteById(cid);
+			return "Customer details deleted successfully";
+		}else {
+			
+			return "Customer not present";
+		}
+	}
 }
