@@ -50,5 +50,17 @@ public String toString() {
 	return "VaccinationCenter [vcid=" + vcid + ", hcname=" + hcname + ", vcname=" + vcname + ", vdate=" + vdate
 			+ ", cid=" + cid + "]";
 }
+public VaccinationCenter() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public VaccinationCenter(int vcid, String hcname, String vcname, LocalDateTime vdate, Integer cid) {
+	super();
+	this.vcid = vcid;
+	this.hcname = hcname;
+	this.vcname = vcname;
+	this.vdate = vdate;
+	this.cid = cid;
+}
 
 }

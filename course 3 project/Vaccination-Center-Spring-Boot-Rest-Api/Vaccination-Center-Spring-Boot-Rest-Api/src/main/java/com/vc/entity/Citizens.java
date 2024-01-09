@@ -4,6 +4,7 @@ import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
@@ -18,7 +19,7 @@ private String phonenumber;
 private String city;
 private String state;
 private String pincode;
-@OneToMany(cascade = CascadeType.ALL)
+@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 @JoinColumn(name = "cid")
 private List<VaccinationCenter> listofvc;
 public int getCid() {
@@ -75,11 +76,28 @@ public List<VaccinationCenter> getListofvc() {
 public void setListofvc(List<VaccinationCenter> listofvc) {
 	this.listofvc = listofvc;
 }
+
 @Override
 public String toString() {
 	return "Citizens [cid=" + cid + ", cname=" + cname + ", age=" + age + ", gender=" + gender + ", phonenumber="
-			+ phonenumber + ", city=" + city + ", state=" + state + ", pincode=" + pincode + ", listofvc=" + listofvc
-			+ "]";
+			+ phonenumber + ", city=" + city + ", state=" + state + ", pincode=" + pincode + "]";
+}
+public Citizens() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Citizens(int cid, String cname, int age, String gender, String phonenumber, String city, String state,
+		String pincode, List<VaccinationCenter> listofvc) {
+	super();
+	this.cid = cid;
+	this.cname = cname;
+	this.age = age;
+	this.gender = gender;
+	this.phonenumber = phonenumber;
+	this.city = city;
+	this.state = state;
+	this.pincode = pincode;
+	this.listofvc = listofvc;
 }
 
 }
