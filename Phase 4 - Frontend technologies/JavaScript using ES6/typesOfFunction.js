@@ -17,4 +17,29 @@ display3();
 var display4 = function() {
     document.write("<br/> Expression style function without name")
 }
+
 display4();
+
+
+// arrow function : it is a part of ES6 features 
+
+let display5 = ()=>document.write("<br/> This is arrow function");
+
+display5();
+
+// expression style function with addition of two numbers 
+
+let addNumber1 = function(a,b){
+    var sum = a+b;
+    return sum;
+}
+document.write("<br/> Addition of two number using experssion "+addNumber1(100,200));
+
+// arrow style function with addition of two numbers 
+let addNumber2 = (a,b)=>a+b;
+document.write("<br/> Addition of two number using arrow  "+addNumber2(100,200));
+
+
+
+
+
