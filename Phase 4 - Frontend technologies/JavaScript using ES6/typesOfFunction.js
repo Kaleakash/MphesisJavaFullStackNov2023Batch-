@@ -65,22 +65,37 @@
 
 
 
-function greeting(fname,callback){
-    return "Welcome "+callback(fname);
-}
+// function greeting(fname,callback){
+//     return "Welcome "+callback(fname);
+// }
 
-let maleInfo = function(name){
-    return "Mr "+name;
-}
+// let maleInfo = function(name){
+//     return "Mr "+name;
+// }
 
-let femaleInfo = (name)=>"Miss "+name;
+// let femaleInfo = (name)=>"Miss "+name;
 
-document.write("<br/> "+greeting("Ravi",maleInfo));
-document.write("<br/> "+greeting("Reeta",femaleInfo));
+// document.write("<br/> "+greeting("Ravi",maleInfo));
+// document.write("<br/> "+greeting("Reeta",femaleInfo));
 
-document.write("<br/>",greeting("Ajay",function(name){
-    return "Mr "+name;
-}))
+// document.write("<br/>",greeting("Ajay",function(name){
+//     return "Mr "+name;
+// }))
 
-document.write("<br/>"+greeting("Meeta",(name)=>"Miss "+name));
+// document.write("<br/>"+greeting("Meeta",(name)=>"Miss "+name));
+
+(function(){
+    document.write("<br/> Simple IIFE function")
+})();
+
+
+((a,b)=>document.write(a+b))(10,20);
+
+
+
+
+
+
+
+
 
