@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function hello() {
+            //alert("Event fired....")
+            // reading the textfield value using name attribute 
+        //     var fname = document.getElementsByName("name")[0].value;
+        //     var lname = document.getElementsByName("name")[1].value;
+        //    // alert(fname+" "+lname);
+        //    var fullname = fname+" "+lname;
+        //    document.getElementsByName("fullname")[0].value=fullname;
+
+        // reading the value using id attribute 
+
+         var fname = document.getElementById("n1").value;
+        var lname = document.getElementById("n2").value;
+        //    // alert(fname+" "+lname);
+         var fullname = fname+" "+lname;
+         document.getElementById("n3").value=fullname;
+         document.getElementById("n1").value="";
+         document.getElementById("n2").value="";
+        }
+        function readValue(){
+            var h2TagValue = document.getElementsByTagName("h2")[0].innerHTML;  //non editable 
+           // alert(h2TagValue)
+            document.getElementById("output").innerHTML="Hello"+h2TagValue;
+        }
+    </script>
+</head>
+<body>
+    FName :<input type="text" name="name" id="n1"/><br/>
+    LName :<input type="text" name="name" id="n2"/><br/>
+    FullName :<input type="text" name="fullname" id="n3" readonly/><br/>
+    <input type="button" value="Click Here!" onclick="hello()"/><br/>
+    <hr/>
+<h2>Welcome to Simple HTML Web Page</h2><br/>
+    <div id="output"></div>
+    <input type="button" value="click here" onclick="readValue()"/>
+</body>
+</html>
