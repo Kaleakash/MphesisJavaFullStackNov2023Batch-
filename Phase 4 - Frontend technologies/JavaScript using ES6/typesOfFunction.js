@@ -39,7 +39,29 @@ document.write("<br/> Addition of two number using experssion "+addNumber1(100,2
 let addNumber2 = (a,b)=>a+b;
 document.write("<br/> Addition of two number using arrow  "+addNumber2(100,200));
 
+// find the largest of two number using expression style 
+let findlargest1 = function(a,b){
+    
+    if(a>b){
+        return a;
+    }else {
+        return b;
+    }
 
+}
+document.write("<br/> Find largest of two number using expression style "+findlargest1(10,5));
+// find the largest of two number using arrow style 
+
+let findlargest2 = (a,b)=>{
+    
+    if(a>b){
+        return a;
+    }else {
+        return b;
+    }
+
+}
+document.write("<br/> Find largest of two number using expression style "+findlargest2(10,5));
 
 
 
