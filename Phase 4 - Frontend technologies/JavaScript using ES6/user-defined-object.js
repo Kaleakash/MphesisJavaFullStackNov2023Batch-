@@ -52,20 +52,33 @@
 // emp3.disEmployee();
 // emp4.disEmployee();
 
-// creating object in class style from ES6 onward 
+// // creating object in class style from ES6 onward 
+// class Employee {
+//     id=100;
+//     name="Ravi";
+//     salary = 12000;     // instance variable in class without var,let and this keyword 
+//     disEmployee(){
+//         document.write("This is Employee function");
+//         document.write("<br/> id is "+this.id);
+//         document.write("<br/> name is "+this.name);
+//         document.write("<br/> salary is "+this.salary);
+//     }
+// }
+// let emp1 = new Employee();
+// emp1.disEmployee();
+
 class Employee {
-    id=100;
-    name="Ravi";
-    salary = 12000;     // instance variable in class without var,let and this keyword 
-    disEmployee(){
-        document.write("This is Employee function");
-        document.write("<br/> id is "+this.id);
-        document.write("<br/> name is "+this.name);
-        document.write("<br/> salary is "+this.salary);
+    constructor() {
+        document.write("<br/> memory created...")
+    }
+    displayEmployee() {
+            document.write("<br/> this is function")
     }
 }
+
 let emp1 = new Employee();
-emp1.disEmployee();
+emp1.displayEmployee();
+
 
 
 
