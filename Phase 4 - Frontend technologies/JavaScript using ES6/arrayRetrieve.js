@@ -47,5 +47,5 @@ let total1= num.reduce(function(pv,cv) {
     document.write("<br/>current value "+cv);
     return pv+cv;
 })
-document.write("Total at last "+total1)
+document.write("<br/>Total at last "+total1)
 

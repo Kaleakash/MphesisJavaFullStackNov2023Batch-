@@ -1,0 +1,10 @@
+let msg1 = "Welcome to JS Training";
+let msg2 = new String("Welcoem to JS Training");
+document.write("<br/>"+msg1);
+document.write("<br/>"+msg2);
+document.write("<br/>"+msg1.toLowerCase());
+document.write("<br/>"+msg1.toUpperCase());
+document.write("<br/>"+msg1.substring(4));
+document.write("<br/>"+msg1.substring(4,10));
+document.write("<br/>"+msg1.indexOf('o'));
+document.write("<br/>"+msg1.lastIndexOf('i'));
