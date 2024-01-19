@@ -27,12 +27,25 @@
 
 // num.forEach((v,i)=>document.write("<br/>Value is "+v+"Index is "+i));
 
-let num=[100,111,200,113,300,11,5400,500,117];
+//let num=[100,111,200,113,300,11,5400,500,117];
 
 //num.map(e=>e+10).forEach(v=>document.write("<br/> Value is "+v));
 
 //num.forEach(v=>document.write("<br/> Value is "+v));
 //num.filter(v=>v%2==0).forEach(v=>document.write("<br/> Value "+v));
 //num.filter(v=>v%2!=0).forEach(v=>document.write("<br/> Value "+v));
-num.map(v=>v+100).forEach(v=>document.write("<br/> Value is "+v));
+//num.map(v=>v+100).forEach(v=>document.write("<br/> Value is "+v));
+
+let num = [10,20,30,40,50,60];
+            //num.reduce()
+document.write("<br/> "+num+"<br/>");
+let total = num.reduce((pv,cv)=>pv+cv);
+document.write(total);
+
+let total1= num.reduce(function(pv,cv) {
+    document.write("<br/>previous value "+pv);
+    document.write("<br/>current value "+cv);
+    return pv+cv;
+})
+document.write("Total at last "+total1)
 
