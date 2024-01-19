@@ -1,4 +1,4 @@
-let num=[100,200,300,400,500];
+//let num=[100,200,300,400,500];
 // document.write("<br/> "+num);
 // document.write("<br/> "+num.join("->"));
 // document.write("<br/> Retreive element using for loop");
@@ -13,20 +13,26 @@ let num=[100,200,300,400,500];
 // for(let n of num){
 //     document.write("<br/> Value "+n);
 // }
-document.write("<br/> retrieve using callback")
-num.forEach(display);
+// document.write("<br/> retrieve using callback")
+// num.forEach(display);
 
-function display(v,i){
-    document.write("<br/>Value is "+v+" Index is "+i)
-}
-document.write("<br/> retreive using callback as function expression");
-num.forEach(function(v,i){
-    document.write("<br/> VAlue is "+v+" Index is "+i)
-});
-document.write("<br/> retreive using callback as function expression");
+// function display(v,i){
+//     document.write("<br/>Value is "+v+" Index is "+i)
+// }
+// document.write("<br/> retreive using callback as function expression");
+// num.forEach(function(v,i){
+//     document.write("<br/> VAlue is "+v+" Index is "+i)
+// });
+// document.write("<br/> retreive using callback as function expression");
 
-num.forEach((v,i)=>document.write("<br/>Value is "+v+"Index is "+i));
+// num.forEach((v,i)=>document.write("<br/>Value is "+v+"Index is "+i));
 
+let num=[100,111,200,113,300,11,5400,500,117];
 
+//num.map(e=>e+10).forEach(v=>document.write("<br/> Value is "+v));
 
+//num.forEach(v=>document.write("<br/> Value is "+v));
+//num.filter(v=>v%2==0).forEach(v=>document.write("<br/> Value "+v));
+//num.filter(v=>v%2!=0).forEach(v=>document.write("<br/> Value "+v));
+num.map(v=>v+100).forEach(v=>document.write("<br/> Value is "+v));
 
