@@ -34,20 +34,38 @@
 
 
 // function style object creation with parameter like parameter constructor 
-function Employee(id,name,salary) {
-        this.id=id;
-        this.name = name;
-        this.salary = salary    // like instance variable.
+// function Employee(id,name,salary) {
+//         this.id=id;
+//         this.name = name;
+//         this.salary = salary    // like instance variable.
         
-        this.disEmployee  = function() {    // instance function or method 
-            document.write("<br/> Employee object function");
-            document.write("<br/> id is "+this.id);
-            document.write("<br/> name is "+this.name);
-            document.write("<br/> salary is "+this.salary);
-        }
+//         this.disEmployee  = function() {    // instance function or method 
+//             document.write("<br/> Employee object function");
+//             document.write("<br/> id is "+this.id);
+//             document.write("<br/> name is "+this.name);
+//             document.write("<br/> salary is "+this.salary);
+//         }
        
+// }
+// var emp3 = new Employee(1,"Ajay",24000);
+// var emp4 = new Employee(2,"Vinod",34000);
+// emp3.disEmployee();
+// emp4.disEmployee();
+
+// creating object in class style from ES6 onward 
+class Employee {
+    id=100;
+    name="Ravi";
+    salary = 12000;     // instance variable in class without var,let and this keyword 
+    disEmployee(){
+        document.write("This is Employee function");
+        document.write("<br/> id is "+this.id);
+        document.write("<br/> name is "+this.name);
+        document.write("<br/> salary is "+this.salary);
+    }
 }
-var emp3 = new Employee(1,"Ajay",24000);
-var emp4 = new Employee(2,"Vinod",34000);
-emp3.disEmployee();
-emp4.disEmployee();
+let emp1 = new Employee();
+emp1.disEmployee();
+
+
+
