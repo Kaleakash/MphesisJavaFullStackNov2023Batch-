@@ -67,18 +67,48 @@
 // let emp1 = new Employee();
 // emp1.disEmployee();
 
+// class Employee {
+//     constructor() {
+//         document.write("<br/> memory created...")
+//     }
+//     displayEmployee() {
+//             document.write("<br/> this is function")
+//     }
+// }
+
+// let emp1 = new Employee();
+// emp1.displayEmployee();
+
+
+
+
+// parameterized constructor using class 
+
 class Employee {
-    constructor() {
-        document.write("<br/> memory created...")
+    // id=100;
+    // name="Ravi";
+    // salary = 12000;     // instance variable in class without var,let and this keyword 
+    constructor(id=0,name="Unknown",salary=8000){
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
     }
-    displayEmployee() {
-            document.write("<br/> this is function")
+    //constructor() {}
+    disEmployee(){
+        document.write("<br/>This is Employee function");
+        document.write("<br/> id is "+this.id);
+        document.write("<br/> name is "+this.name);
+        document.write("<br/> salary is "+this.salary);
     }
 }
-
-let emp1 = new Employee();
-emp1.displayEmployee();
-
-
-
+let emp1 = new Employee(101,"Dinesh",34000);
+let emp2 = new Employee(102,"Lokesh",45000)
+let emp3 = new Employee(103,"Mahesh");
+let emp4 = new Employee(104);
+let emp5 = new Employee();
+emp1.disEmployee();
+emp2.disEmployee();
+emp3.disEmployee();
+emp4.disEmployee();
+emp5.disEmployee();
 
