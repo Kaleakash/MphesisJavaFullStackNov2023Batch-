@@ -1,0 +1,13 @@
+<div>
+    <h4>Attribute directive</h4>
+    <p>Welcome to Attribute directives</p>
+    <p style="color:red">Apply CSS effect using normal inline css</p>
+    <p [ngStyle]="{'color':'red'}">Apply CSS effect using ngStyle</p>
+    <p [ngStyle]="styleVariable">Apply CSS effect using ngStyle</p>
+    <p class="abc">Apply css effect usign class selector</p>
+    <p [ngClass]="{abc:true}">Apply CSS effect using ngClass</p>
+    <p [ngClass]="{abc:true}">Apply CSS effect using ngClass</p>
+    <br/>
+    <input type="button" value="Change style" (click)="fun1()"/><br/>
+    <p [ngClass]="{abc:f1,xyz:f2}">Apply CSS effect using ngClass</p>
+</div>
