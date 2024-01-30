@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-product',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
+  constructor(public ps:ProductService){} // DI for product service 
+
+  loadProduct() {
+    this.ps.loadFakeProduct();
+  }
+
+  
 }
