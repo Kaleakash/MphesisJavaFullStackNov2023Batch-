@@ -13,6 +13,10 @@ f3:boolean = false;
 f4:boolean = false;
 b1:string = "show";
 
+
+n1:Array<number>=[10,20,30,40,50,60];
+names:Array<string>=["Ravi","Ramesh","Ajay","Vijay"];
+
 fun1(): void {
   this.f3=true;
 }
@@ -27,6 +31,14 @@ toggleImg(): void {
   }
 
 }
+
+addNames(nameRef:any){      // templatereferne 
+  let name = nameRef.value;
+  this.names.push(name);      // added to array variables. 
+  nameRef.value="";
+}
+
+
 
 
 }
