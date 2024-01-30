@@ -1,3 +1,12 @@
 <div>
     <input type="button" value="Load Products" (click)="loadProduct()"/>
+    <br/>
+    <ul>
+        <li *ngFor="let product of products">
+            Pid: {{product.id}} 
+            Title: {{product.title}} 
+            Price :{{product.price}} 
+            Description : {{product.description}}
+        </li>
+    </ul>
 </div>
