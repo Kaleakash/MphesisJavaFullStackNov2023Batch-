@@ -1,0 +1,7 @@
+{
+	"products": [
+		{"id":1,"name":"TV","price":85000},
+		{"id":2,"name":"Computer","price":49000},
+		{"id":3,"name":"Laptop","price":97000}
+	]
+}
