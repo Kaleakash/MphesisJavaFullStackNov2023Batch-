@@ -11,7 +11,8 @@ export class ProductComponent implements OnInit{
 productRef = new FormGroup({
   id:new FormControl(),
   name:new FormControl(),
-  price:new FormControl()
+  price:new FormControl(),
+  image:new FormControl()
 });
 // this function call only once when component loaded...
 ngOnInit(): void {

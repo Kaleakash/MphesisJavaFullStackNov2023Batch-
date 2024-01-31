@@ -7,6 +7,8 @@
     <input type="text" formControlName="name"/><br/>
     <label>Price</label>
     <input type="number" formControlName="price"/><br/>
+    <label>Image</label>
+    <input type="url" formControlName="image"/><br/>
     <input type="submit" value="Store Product"/>
     <input type="reset" value="Reset"/>
 </form>
@@ -18,11 +20,13 @@
                 <th>PId</th>
                 <th>PName</th>
                 <th>Price</th>
+                <th>Image</th>
             </tr>
             <tr *ngFor="let product of products">
                     <td>{{product.id}}</td>
                     <td>{{product.name}}</td>
                     <td>{{product.price}}</td>
+                    <td><img src={{product.image}} width="100px" height="100px"/></td>
             </tr>
     </table>
 </div>
