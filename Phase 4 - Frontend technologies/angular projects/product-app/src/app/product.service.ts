@@ -21,6 +21,10 @@ export class ProductService {
     return this.http.post("http://localhost:3000/products",product);
   }
 
+  deleteProduct(pid:any):any {
+    // delete record using path param
+    return this.http.delete("http://localhost:3000/products/"+pid)
+  }
 }
 
 

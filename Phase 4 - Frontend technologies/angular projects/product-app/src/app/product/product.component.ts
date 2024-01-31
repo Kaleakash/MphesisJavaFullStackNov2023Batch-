@@ -50,6 +50,16 @@ msg:string ="";
     this.productRef.reset();
   }
 
+  deleteProduct(pid:any):void {
+    //alert(pid);
+    this.ps.deleteProduct(pid).subscribe({
+      next:(data:any)=>console.log(data),
+      error:(error:any)=>console.log(error),
+      complete:()=>{this.loadProducts()}
+    })
+  }
+
+
 
 
 
