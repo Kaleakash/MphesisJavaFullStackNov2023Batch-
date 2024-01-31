@@ -25,6 +25,14 @@ export class ProductService {
     // delete record using path param
     return this.http.delete("http://localhost:3000/products/"+pid)
   }
+
+   // post is use put the data
+  // 2 parameter 1st url with product id and 2nd parameter updated or existing data. 
+  updateProduct(product:any): any {
+    return this.http.put("http://localhost:3000/products/"+product.id,product);
+  }
+
+
 }
 
 

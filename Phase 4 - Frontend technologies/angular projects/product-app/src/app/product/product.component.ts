@@ -19,6 +19,8 @@ ngOnInit(): void {
     this.loadProducts();
 }
 
+submitButton:string ="Store Product";
+
 products:Array<Product>=[];
   constructor(public ps:ProductService){}     // DI for Product Service 
   loadProducts() : void {
@@ -33,18 +35,36 @@ products:Array<Product>=[];
 msg:string ="";
   storeProduct(): void {
     let product = this.productRef.value;
-    console.log(product);
-    let result = this.products.find(p=>p.id==product.id); // if present it return that record 
-                          // else it return undefined. 
-    if(result==undefined){
-      this.ps.storeProduct(product).subscribe({
-        next:(data:any)=>console.log(data),
-        error:(error:any)=>console.log(error),
-        complete:()=>{this.loadProducts()}
-      })
-    }else {
-      this.msg="Product is must be unique";
-    }
+
+if(this.submitButton=="Store Product"){
+
+
+  console.log(product);
+  let result = this.products.find(p=>p.id==product.id); // if present it return that record 
+                        // else it return undefined. 
+  if(result==undefined){
+    this.ps.storeProduct(product).subscribe({
+      next:(data:any)=>console.log(data),
+      error:(error:any)=>console.log(error),
+      complete:()=>{this.loadProducts()}
+    })
+  }else {
+    this.msg="Product is must be unique";
+  }
+
+
+}else {
+  //alert("ready to update")
+  this.ps.updateProduct(product).subscribe({
+    next:(data:any)=>console.log(data),
+    error:(error:any)=>console.log(error),
+    complete:()=>{this.loadProducts()}
+  })
+
+  this.submitButton="Store Product";
+}
+
+
 
     
     this.productRef.reset();
@@ -59,6 +79,14 @@ msg:string ="";
     })
   }
 
+  setUpdateProduct(product:any): void {
+    // productRef is form group get to get form control 
+    this.productRef.get("id")?.setValue(product.id);    
+    this.productRef.get("name")?.setValue(product.name);   
+    this.productRef.get("price")?.setValue(product.price);   
+    this.productRef.get("image")?.setValue(product.image);   
+    this.submitButton="Update Product";
+  }
 
 
 
