@@ -1,21 +1,21 @@
-<div>
+<div class="container">
 <h2>Store Product</h2>
-<form [formGroup]="productRef" (ngSubmit)="storeProduct()">
+<form [formGroup]="productRef" (ngSubmit)="storeProduct()" class="form-group">
     <label>PId</label>
-    <input type="text" formControlName="id"/><br/>
+    <input type="text" formControlName="id" class="form-control"/><br/>
     <label>PName</label>
-    <input type="text" formControlName="name"/><br/>
+    <input type="text" formControlName="name" class="form-control"/><br/>
     <label>Price</label>
-    <input type="number" formControlName="price"/><br/>
+    <input type="number" formControlName="price" class="form-control"/><br/>
     <label>Image</label>
-    <input type="url" formControlName="image"/><br/>
-    <input type="submit" [value]="submitButton"/>
-    <input type="reset" value="Reset"/>
+    <input type="url" formControlName="image" class="form-control"/><br/>
+    <input type="submit" [value]="submitButton" class="btn btn-success"/>
+    <input type="reset" value="Reset" class="btn btn-info"/>
 </form>
 <span style="color:red">{{msg}}</span>
 <hr/>
     <h2>All Products </h2>
-    <table border="1">
+    <table border="1" class="table table-stripped">
             <tr>
                 <th>PId</th>
                 <th>PName</th>
