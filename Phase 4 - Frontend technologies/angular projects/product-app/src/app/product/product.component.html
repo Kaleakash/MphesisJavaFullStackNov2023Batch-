@@ -1,8 +1,17 @@
 <div>
-<input type="button" value="load product" (click)="loadProducts()"/><br/>
-
-
-
+<h2>Store Product</h2>
+<form [formGroup]="productRef" (ngSubmit)="storeProduct()">
+    <label>PId</label>
+    <input type="text" formControlName="id"/><br/>
+    <label>PName</label>
+    <input type="text" formControlName="name"/><br/>
+    <label>Price</label>
+    <input type="number" formControlName="price"/><br/>
+    <input type="submit" value="Store Product"/>
+    <input type="reset" value="Reset"/>
+</form>
+<span style="color:red">{{msg}}</span>
+<hr/>
     <h2>All Products </h2>
     <table border="1">
             <tr>
