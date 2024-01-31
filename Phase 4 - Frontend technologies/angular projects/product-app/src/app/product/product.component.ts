@@ -18,7 +18,7 @@ productRef = new FormGroup({
 ngOnInit(): void {
     this.loadProducts();
 }
-
+dd = new Date();
 submitButton:string ="Store Product";
 
 products:Array<Product>=[];

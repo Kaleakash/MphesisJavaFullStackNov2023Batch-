@@ -20,14 +20,16 @@
                 <th>PId</th>
                 <th>PName</th>
                 <th>Price</th>
+                <th>Date Info</th>
                 <th>Image</th>
                 <th>Delete</th>
                 <th>Update</th>
             </tr>
             <tr *ngFor="let product of products">
                     <td>{{product.id}}</td>
-                    <td>{{product.name}}</td>
-                    <td>{{product.price}}</td>
+                    <td>{{product.name | uppercase}}</td>
+                    <td>{{product.price | currency:"&#8377;"}}</td>
+                    <td>{{dd | date:'short'}}</td>
                     <td><img src={{product.image}} width="100px" height="100px"/></td>
                     <td>
                         <!-- <input type="button" value="Delete" (click)="deleteProduct(product.id)"/> -->
