@@ -1,1 +1,19 @@
-<p>employees works!</p>
+<div>
+    <input type="button" value="Add Employee"/>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <!-- <th>Last Name</th>
+            <th>EmailId</th>
+            <th>View Details</th> -->
+        </tr>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+             <td>{{employee.first_name}}</td>
+            <!--<td>{{employee.last_name}}</td>
+            <td>{{employee.email}}</td> -->
+            <td><input type="button" value="View Details" (click)="viewDetails(employee.id)"/></td>
+        </tr>
+    </table>
+</div>

@@ -1,1 +1,16 @@
-<p>employeelist works!</p>
+<div>
+    <div *ngIf="f1">
+    <h3>Details of {{employee.first_name}}</h3>
+    <p>Employee Id is {{employee.id}}</p>
+    <p>Employee First Name is {{employee.first_name}}</p>
+    <p>Employee Last Name is {{employee.last_name}}</p>
+    <p>Employee EmailId {{employee.email}}</p>
+    <input type="button" value="Employee List" (click)="displayAllEmployeeList()"/>
+    <input type="button" value="Delete" (click)="deleteEmployee(employee.id)"/>
+    <input type="button" value="Update " (click)="updateEmployee(employee)"/>
+    </div>
+
+    <div *ngIf="f2">
+            <h2>Update Form</h2>
+    </div>
+</div>
