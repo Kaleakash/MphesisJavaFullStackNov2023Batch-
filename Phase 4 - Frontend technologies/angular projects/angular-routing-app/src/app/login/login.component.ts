@@ -41,7 +41,8 @@ ngOnInit(): void {
     // }
 
     if(result!=undefined){
-      this.router.navigate(["home"]);
+      sessionStorage.setItem("user",login.emailid);   
+      this.router.navigate(["home",],{skipLocationChange:true});
     }else {
       this.msg="Failure try once again";
     }
