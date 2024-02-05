@@ -18,7 +18,7 @@ class EmployeeServiceTest {
 	}
 
 	@Test
-	@Disabled
+	
 	void testGetEmployee() {
 		//fail("Not yet implemented");
 		EmployeeService es = new EmployeeService();
@@ -30,7 +30,7 @@ class EmployeeServiceTest {
 	}
 
 	@Test
-	@Disabled
+	
 	void testGetAllEmployee() {
 		EmployeeService es = new EmployeeService();
 		List<Employee> listOfEmp = es.getAllEmployee();
@@ -42,7 +42,7 @@ class EmployeeServiceTest {
 	}
 
 	@Test
-	@Disabled
+	
 	void testUpdateEmployee() {
 		EmployeeService es = new EmployeeService();
 		Employee emp = new Employee(1, "Mahesh", 15000);
@@ -54,7 +54,7 @@ class EmployeeServiceTest {
 	}
 
 	@Test
-	@Disabled
+	
 	void testGetEmployeeObject() {
 	EmployeeService es = new EmployeeService();
 	Employee emp = es.getEmployeeObject(100, "Ravi", 16000);
