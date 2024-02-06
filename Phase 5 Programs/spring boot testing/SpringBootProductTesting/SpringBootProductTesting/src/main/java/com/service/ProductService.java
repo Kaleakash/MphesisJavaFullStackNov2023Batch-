@@ -16,6 +16,12 @@ public class ProductService {
 	ProductRepository productRepository;
 	
 	public List<Product> findAllProduct(){
+		try {
+			Thread.sleep(5000);   // it pause for 5 seconds 
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 		return productRepository.findAll();
 	}
 	
