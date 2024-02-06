@@ -3,13 +3,21 @@
   <test name="LoginTest">
     <classes>
     <class name="com.service.TestNGHook"></class>
-      <class name="com.service.LoginServiceTest"/>
+      <class name="com.service.LoginServiceTest">
+      		<methods>
+  				<exclude name="signInTest"></exclude>
+  			</methods>
+      </class>
     </classes>
   </test> <!-- Test -->
   
   <test name="OperationTest">
   	<classes>
-  		<class name="com.service.LoginServiceTest"></class>
+  		<class name="com.service.OperationServiceTest">
+  			<methods>
+  				<exclude name="addTest"></exclude>
+  			</methods>
+  		</class>
   	</classes>
   </test>
   
