@@ -1,39 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="9" passed="4" failed="0" skipped="0">
+<testng-results ignored="2" total="6" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-06T15:35:53 IST" name="Suite" finished-at="2024-02-06T15:35:54 IST" duration-ms="46">
+  <suite started-at="2024-02-06T16:17:03 IST" name="MySuite" finished-at="2024-02-06T16:17:03 IST" duration-ms="131">
     <groups>
-      <group name="speed">
-        <method signature="BikeTest.speedTest()[pri:0, instance:com.service.BikeTest@d29f28]" name="speedTest" class="com.service.BikeTest"/>
-        <method signature="BusTest.speedTest()[pri:0, instance:com.service.BusTest@2053d869]" name="speedTest" class="com.service.BusTest"/>
-        <method signature="CarTest.mailageTest()[pri:0, instance:com.service.CarTest@1e683a3e]" name="mailageTest" class="com.service.CarTest"/>
-        <method signature="CarTest.speedTest()[pri:0, instance:com.service.CarTest@1e683a3e]" name="speedTest" class="com.service.CarTest"/>
-      </group> <!-- speed -->
     </groups>
-    <test started-at="2024-02-06T15:35:53 IST" name="Test" finished-at="2024-02-06T15:35:54 IST" duration-ms="46">
-      <class name="com.service.CarTest">
-        <test-method signature="mailageTest()[pri:0, instance:com.service.CarTest@1e683a3e]" started-at="2024-02-06T15:35:54 IST" name="mailageTest" finished-at="2024-02-06T15:35:54 IST" duration-ms="1" status="PASS">
+    <test started-at="2024-02-06T16:17:03 IST" name="LoginTest" finished-at="2024-02-06T16:17:03 IST" duration-ms="66">
+      <class name="com.service.LoginServiceTest">
+        <test-method signature="signUpTest()[pri:0, instance:com.service.LoginServiceTest@47987356]" started-at="2024-02-06T16:17:03 IST" name="signUpTest" finished-at="2024-02-06T16:17:03 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mailageTest -->
-        <test-method signature="speedTest()[pri:0, instance:com.service.CarTest@1e683a3e]" started-at="2024-02-06T15:35:54 IST" name="speedTest" finished-at="2024-02-06T15:35:54 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- signUpTest -->
+      </class> <!-- com.service.LoginServiceTest -->
+      <class name="com.service.TestNGHook">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="beforeTest" finished-at="2024-02-06T16:17:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- speedTest -->
-      </class> <!-- com.service.CarTest -->
-      <class name="com.service.BusTest">
-        <test-method signature="speedTest()[pri:0, instance:com.service.BusTest@2053d869]" started-at="2024-02-06T15:35:54 IST" name="speedTest" finished-at="2024-02-06T15:35:54 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="beforeClass" finished-at="2024-02-06T16:17:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- speedTest -->
-      </class> <!-- com.service.BusTest -->
-      <class name="com.service.BikeTest">
-        <test-method signature="speedTest()[pri:0, instance:com.service.BikeTest@d29f28]" started-at="2024-02-06T15:35:54 IST" name="speedTest" finished-at="2024-02-06T15:35:54 IST" duration-ms="7" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="beforeMethod" finished-at="2024-02-06T16:17:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- speedTest -->
-      </class> <!-- com.service.BikeTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test1()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="test1" finished-at="2024-02-06T16:17:03 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="afterMethod" finished-at="2024-02-06T16:17:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="test2()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="test2" finished-at="2024-02-06T16:17:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="beforeMethod" finished-at="2024-02-06T16:17:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="afterMethod" finished-at="2024-02-06T16:17:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="afterClass" finished-at="2024-02-06T16:17:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="afterTest" finished-at="2024-02-06T16:17:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.service.TestNGHook -->
+    </test> <!-- LoginTest -->
+    <test started-at="2024-02-06T16:17:03 IST" name="OperationTest" finished-at="2024-02-06T16:17:03 IST" duration-ms="4">
+      <class name="com.service.TestNGHook">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="beforeSuite" finished-at="2024-02-06T16:17:03 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.service.TestNGHook@f736069]" started-at="2024-02-06T16:17:03 IST" name="afterSuite" finished-at="2024-02-06T16:17:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.service.TestNGHook -->
+      <class name="com.service.OperationServiceTest">
+        <test-method signature="subTest()[pri:0, instance:com.service.OperationServiceTest@66f57048]" started-at="2024-02-06T16:17:03 IST" name="subTest" finished-at="2024-02-06T16:17:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subTest -->
+      </class> <!-- com.service.OperationServiceTest -->
+    </test> <!-- OperationTest -->
+  </suite> <!-- MySuite -->
 </testng-results>
