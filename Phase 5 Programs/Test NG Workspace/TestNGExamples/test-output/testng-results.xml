@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-05T17:42:18 IST" name="Default suite" finished-at="2024-02-05T17:42:18 IST" duration-ms="43">
+  <suite started-at="2024-02-06T14:25:10 IST" name="MySuite" finished-at="2024-02-06T14:25:10 IST" duration-ms="42">
     <groups>
     </groups>
-    <test started-at="2024-02-05T17:42:18 IST" name="Default test" finished-at="2024-02-05T17:42:18 IST" duration-ms="43">
-      <class name="com.service.OperationServiceTest">
-        <test-method signature="addTest()[pri:0, instance:com.service.OperationServiceTest@4de4b452]" started-at="2024-02-05T17:42:18 IST" name="addTest" finished-at="2024-02-05T17:42:18 IST" duration-ms="8" status="PASS">
+    <test started-at="2024-02-06T14:25:10 IST" name="LoginTest" finished-at="2024-02-06T14:25:10 IST" duration-ms="42">
+      <class name="com.service.LoginServiceTest">
+        <test-method signature="signInTest()[pri:0, instance:com.service.LoginServiceTest@550ee7e5]" started-at="2024-02-06T14:25:10 IST" name="signInTest" finished-at="2024-02-06T14:25:10 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addTest -->
-      </class> <!-- com.service.OperationServiceTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- signInTest -->
+        <test-method signature="signUpTest()[pri:0, instance:com.service.LoginServiceTest@550ee7e5]" started-at="2024-02-06T14:25:10 IST" name="signUpTest" finished-at="2024-02-06T14:25:10 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTest -->
+      </class> <!-- com.service.LoginServiceTest -->
+    </test> <!-- LoginTest -->
+  </suite> <!-- MySuite -->
 </testng-results>
