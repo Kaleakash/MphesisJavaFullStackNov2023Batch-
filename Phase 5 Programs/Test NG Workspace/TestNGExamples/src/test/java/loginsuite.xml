@@ -2,7 +2,15 @@
 <suite parallel="false" name="MySuite">
   <test name="LoginTest">
     <classes>
+    <class name="com.service.TestNGHook"></class>
       <class name="com.service.LoginServiceTest"/>
     </classes>
   </test> <!-- Test -->
+  
+  <test name="OperationTest">
+  	<classes>
+  		<class name="com.service.LoginServiceTest"></class>
+  	</classes>
+  </test>
+  
 </suite> <!-- Suite -->
