@@ -15,7 +15,11 @@ public class DemoTest {
 		WebDriver driver = new EdgeDriver();
 		driver.get("https://www.google.com");  // we are loading google page 
 		String title = driver.getTitle();
+		String url = driver.getCurrentUrl();
+		String data = driver.getPageSource();
 		System.out.println(title);
+		System.out.println(url);
+		System.out.println(data);
 		//driver.close();
 	}
 
