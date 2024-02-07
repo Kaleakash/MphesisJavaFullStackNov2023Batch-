@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/JavaScript">
+        function checkLoginDetails() {
+              //  return false;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        if(email.length==0){
+            alert("Emailid is required")
+            return false;
+        }else if(password.length==0){
+            alert("Password is required")
+            return false;
+        }else if(email=="akash@gmail.com" && password=="123"){
+            alert("Successfully login")
+            return true;
+        }else {
+            alert("failure try once agian")
+            return false;
+        }
+        }
+    </script>
 </head>
 <body>
     <h2>Login Page</h2>
-    <form action="home.html">
+    <form action="home.html" onsubmit="return checkLoginDetails()">
         <label>EmailId</label>
          <input type="email" name="email" id="email"/><br/>
         <label>Password</label>
