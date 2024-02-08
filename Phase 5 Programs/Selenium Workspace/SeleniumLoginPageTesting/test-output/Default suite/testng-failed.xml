@@ -3,16 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.login.LoginTesting">
+      <class name="com.login.LoginSpringMVCTesting">
         <methods>
-          <include name="InValidEmailIdAndPasswordTest"/>
-          <include name="IValidEmailIdAndPasswordTest"/>
-          <include name="passwordRequiredTest"/>
           <include name="beforeMethod"/>
-          <include name="afterClass"/>
           <include name="beforeClass"/>
+          <include name="InValidEmailIdAndPasswordTest"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- com.login.LoginTesting -->
+      </class> <!-- com.login.LoginSpringMVCTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
