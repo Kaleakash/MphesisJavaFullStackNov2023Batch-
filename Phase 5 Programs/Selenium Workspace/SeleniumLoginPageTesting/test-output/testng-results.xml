@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-08T14:34:41 IST" name="Suite" finished-at="2024-02-08T14:34:53 IST" duration-ms="12174">
+    <groups>
+    </groups>
+    <test started-at="2024-02-08T14:34:41 IST" name="Test" finished-at="2024-02-08T14:34:53 IST" duration-ms="12174">
+      <class name="com.login.LoginTesting">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:41 IST" name="beforeClass" finished-at="2024-02-08T14:34:41 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:41 IST" name="beforeMethod" finished-at="2024-02-08T14:34:44 IST" duration-ms="2584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="emailIdRequiredTest()[pri:1, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:44 IST" name="emailIdRequiredTest" finished-at="2024-02-08T14:34:44 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailIdRequiredTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:44 IST" name="afterClass" finished-at="2024-02-08T14:34:44 IST" duration-ms="375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:44 IST" name="beforeMethod" finished-at="2024-02-08T14:34:46 IST" duration-ms="1859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="passwordRequiredTest()[pri:2, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:46 IST" name="passwordRequiredTest" finished-at="2024-02-08T14:34:47 IST" duration-ms="670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passwordRequiredTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:47 IST" name="afterClass" finished-at="2024-02-08T14:34:47 IST" duration-ms="418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:47 IST" name="beforeMethod" finished-at="2024-02-08T14:34:49 IST" duration-ms="1783" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="InValidEmailIdAndPasswordTest()[pri:3, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:49 IST" name="InValidEmailIdAndPasswordTest" finished-at="2024-02-08T14:34:50 IST" duration-ms="800" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InValidEmailIdAndPasswordTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:50 IST" name="afterClass" finished-at="2024-02-08T14:34:50 IST" duration-ms="406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:50 IST" name="beforeMethod" finished-at="2024-02-08T14:34:52 IST" duration-ms="1868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="IValidEmailIdAndPasswordTest()[pri:4, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:52 IST" name="IValidEmailIdAndPasswordTest" finished-at="2024-02-08T14:34:53 IST" duration-ms="804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IValidEmailIdAndPasswordTest -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.login.LoginTesting@3ee37e5a]" started-at="2024-02-08T14:34:53 IST" name="afterClass" finished-at="2024-02-08T14:34:53 IST" duration-ms="336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.login.LoginTesting -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
