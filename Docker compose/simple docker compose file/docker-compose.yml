@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  akash-service:
+   image: akashkale/my-angular:222
+   ports:
+     - 81:80
+  patil1-service:
+   image: jagruti0602/my-angular:1
+   ports:
+     - 82:80
+  patil2-service:
+   image: patilmoropant/my-angular:777
+   ports:
+     - 83:80 
+  dilip-service:
+   image: dilip232030/my-angular:2320
+   ports:
+     - 84:80

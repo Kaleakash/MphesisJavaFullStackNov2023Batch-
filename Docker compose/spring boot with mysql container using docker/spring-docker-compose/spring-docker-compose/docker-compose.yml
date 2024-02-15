@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  mysql-container:
+    image: mysql:8
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+    ports:
+      - 3307:3306
+    restart: always
+  springboot-container:
+    build: ./
+    container_name: springboot-container 
+    depends_on:
+      - mysql-container
+    ports:
+      - 9090:9090
+    restart: always
+    
