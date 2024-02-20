@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+              <h6>Login</h6>  
+        </div>
+    </div>
+    <form class="form-group" [formGroup]="loginRef">
+    <div class="row">
+        <div class="col-3">
+         <input type="email" placeholder="Login Id*" class="form-control" formControlName="emailid"/>    
+        </div>
+        <div class="col-3">
+            <input type="password" placeholder="Password*" class="form-control" formControlName="password"/>    
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+         <input type="button" value="Citizens Login" class="btn btn-outline-success" (click)="citizenLogin()"/>    
+        </div>
+        <div class="col-3">
+            <input type="button" value="Admin Login" class="btn btn-outline-success" (click)="adminLogin()"/>    
+        </div>
+    </div>
+
+    </form>
+<hr/>
+    <div class="row">
+        <div class="col-6">
+        <a routerLink="/register">New Citizens Register Form!</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVrjEUSPp7Gc7be5AlhM6kguqcDfEDrPfgXF6CQ3LMw&s"
+            width="300px" height="300px"/>
+        </div>
+    </div>
+</div>
