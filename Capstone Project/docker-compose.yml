@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  mysql-container:
+    image: mysql:8
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: maadhar_db
+    ports:
+      - 3307:3306
+    restart: always
+    networks:
+      - private
+    volumes:
+      - db:/var/lib/mysql
+  springboot-container:
+    build: ./backend/mAadhar_backend_app/mAadhar_backend_app/
+    container_name: springboot-container 
+    depends_on:
+      - mysql-container
+    ports:
+      - 9090:9090
+    restart: always
+    networks:
+      - public
+      - private
+  angular-container:
+    build: ./frontend/mAadhar_frontend_app/
+    container_name: angular-container
+    ports:
+      - 80:80
+    networks:
+      - public
+    depends_on:
+      - springboot-container
+    restart: always  
+networks:
+  public:
+    name: my-public-networks
+    driver: bridge
+  private:
+    name: my-private-networks
+volumes:
+  db:
+   driver: local    

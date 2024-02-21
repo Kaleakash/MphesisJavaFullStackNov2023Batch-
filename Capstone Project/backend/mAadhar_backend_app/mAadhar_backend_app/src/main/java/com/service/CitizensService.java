@@ -52,4 +52,11 @@ public class CitizensService {
 	public List<Citizens> findAllCitizens() {
 		return citizenRepository.findAll();
 	}
+	
+	public Citizens findCitizenByEmailId(String emailid) {
+		return citizenRepository.findCitizenByEmailId(emailid);
+	}
+	
 }
+
+
